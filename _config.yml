@@ -79,5 +79,5 @@ theme: autumn
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://ginkgoch@github.com/ginkgoch/blog.git
+  repo: git@ginkgoch.github.com:ginkgoch/blog.git
   branch: gh-pages
