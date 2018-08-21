@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
-timezone:
+title: Mapping for Fun - Ginkgoch Blog
+subtitle: Made cross-platform GIS mapping easy
+description: Description demo
+keywords: Ginkgoch,GIS,Mapping
+author: Ginkgoch
+language: English
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://blog.ginkgoch.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: autumn
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

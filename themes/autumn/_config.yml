@@ -1,0 +1,26 @@
+title: Mapping for Fun - Ginkgoch Blog
+
+# Nav
+social:
+  Home: https://ginkgoch.com
+  Github: https://github.com/ginkgoch
+  Twitter: https://twitter.com/ginkgoch1
+  Facebook: https://www.facebook.com/yun.ginkgoch.1
+
+# Background image, color
+background: '#f3f3f3'
+
+# Favicon
+favicon: https://ginkgoch.com/favicon-v2.png
+
+# SEO
+keywords: 'ginkgoch, gis, mapping'
+
+# Widgets, enable at least one
+widgets:
+  category: enabled
+  archive: enabled
+  tag: enabled
+
+# Set the first image in post to cover
+auto_cover: true
