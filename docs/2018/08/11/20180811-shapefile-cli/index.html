@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="ginkgoch, gis, mapping">
+    <title>
+        Mapping for Fun - Ginkgoch Blog
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://ginkgoch.com/favicon-v2.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.1.min.css">
+    <script src="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.3.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function() {
+            $('.social-button').click(function() {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124252185-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-124252185-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4307304935160022",
+        enable_page_level_ads: true
+    });
+    </script>
+</head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
+        <a href="/" class="logo">
+            Ginkgoch
+        </a>
+    </h1>
+    <h2 class="desc">
+        Made cross-platform GIS mapping easy
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://ginkgoch.com">
+                        Home
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/ginkgoch">
+                        Github
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://twitter.com/ginkgoch1">
+                        Twitter
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/yun.ginkgoch.1">
+                        Facebook
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+            <h2 class="post-title">
+                Shapefile Command Line Tool
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2018-08-11
+                </li>
+                <li>
+                    Ginkgoch
+                </li>
+            </ul>
+            <div class="post-content">
+                <center>![shapefile cli](/post-imgs/shapefile-cli.gif)</center>
+
+<p>Sometimes, when we want to peek a shapefile, see what’s the shape type it is, how many records it has, or find out what properties it contains. There are some free tools to visualize it. But most of the tools are too heavy or maybe not possible to run on macOS or Linux. Here is a command line tool to help to inspect a specified shapefile. It provides function to inspect a specified shapefile’s header, fields, records etc. You could see, it is totally free and open-source. Enjoy it!</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># global install</span><br><span class="line">npm i -g ginkgoch-shapefile-cli</span><br><span class="line"></span><br><span class="line"># local install</span><br><span class="line">npm i --save ginkgoch-shapefile-cli</span><br><span class="line"></span><br><span class="line">## Help</span><br><span class="line">```terminal</span><br><span class="line">shapefile-cli --help</span><br></pre></td></tr></table></figure>
+
+<p>Usage: <code>index command [options] &lt;file&gt;</code></p>
+<p>Options:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-V, --version                  output the version number</span><br><span class="line">-h, --help                     output usage information</span><br></pre></td></tr></table></figure>
+
+<p>Commands:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">show-header [options] &lt;file&gt;   output a specified shapefile header information</span><br><span class="line">show-fields [options] &lt;file&gt;   output a specified shapefile fields information</span><br><span class="line">show-records [options] &lt;file&gt;  output a specified shapefile records information</span><br><span class="line">convert-geojson [options] &lt;file&gt;  Convert shapefile to GeoJson</span><br></pre></td></tr></table></figure>
+
+<h2 id="Show-Header"><a href="#Show-Header" class="headerlink" title="Show Header"></a>Show Header</h2><p>Show header help</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node index.js show-header --help</span><br></pre></td></tr></table></figure>
+
+<p>Usage: <code>show-header [options] &lt;file&gt;</code></p>
+<p>Options:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-p, --pretty  output header with pretty table format</span><br><span class="line">-h, --help    output usage information</span><br></pre></td></tr></table></figure>
+
+<p>Example - print a shapefile’s header with pretty table format </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">shapefile-cli show-header ~/Downloads/data/shp/USStates.shp -p</span><br><span class="line">╔════════════╤═════════════════════╗</span><br><span class="line">║ fileCode   │ 9994                ║</span><br><span class="line">╟────────────┼─────────────────────╢</span><br><span class="line">║ fileLength │ 222344              ║</span><br><span class="line">╟────────────┼─────────────────────╢</span><br><span class="line">║ version    │ 1000                ║</span><br><span class="line">╟────────────┼─────────────────────╢</span><br><span class="line">║ fileType   │ Polygon             ║</span><br><span class="line">╟────────────┼─────────────────────╢</span><br><span class="line">║ minx       │ -178.21502685546875 ║</span><br><span class="line">╟────────────┼─────────────────────╢</span><br><span class="line">║ miny       │ 18.924781799316406  ║</span><br><span class="line">╟────────────┼─────────────────────╢</span><br><span class="line">║ maxx       │ -66.9698486328125   ║</span><br><span class="line">╟────────────┼─────────────────────╢</span><br><span class="line">║ maxy       │ 71.40664672851562   ║</span><br><span class="line">╚════════════╧═════════════════════╝</span><br></pre></td></tr></table></figure>
+
+<h2 id="Show-Fields"><a href="#Show-Fields" class="headerlink" title="Show Fields"></a>Show Fields</h2><p>Show fields help</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shapefile-cli show-fields --help</span><br></pre></td></tr></table></figure>
+
+<p>Usage: <code>show-fields [options] &lt;file&gt;</code></p>
+<p>Options:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-p, --pretty  output fields with a pretty table format</span><br><span class="line">-h, --help    output usage information</span><br></pre></td></tr></table></figure>
+
+<p>Example - print a shapefile’s fields info in pretty table format.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">shapefile-cli show-fields ~/Downloads/data/shp/USStates.shp -p</span><br><span class="line">╔════════════╤══════╤════════╤═════════╗</span><br><span class="line">║ name       │ type │ length │ decimal ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ AREA       │ N    │ 12     │ 3       ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ PERIMETER  │ N    │ 12     │ 3       ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ STATE_     │ N    │ 11     │ 0       ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ STATE_ID   │ N    │ 11     │ 0       ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ STATE_NAME │ C    │ 25     │ NaN     ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ STATE_FIPS │ C    │ 2      │ NaN     ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ SUB_REGION │ C    │ 7      │ NaN     ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ STATE_ABBR │ C    │ 2      │ NaN     ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ POP1990    │ N    │ 9      │ 0       ║</span><br><span class="line">╟────────────┼──────┼────────┼─────────╢</span><br><span class="line">║ RECID      │ N    │ 9      │ 0       ║</span><br><span class="line">╚════════════╧══════╧════════╧═════════╝</span><br></pre></td></tr></table></figure>
+
+<h2 id="Show-Records"><a href="#Show-Records" class="headerlink" title="Show Records"></a>Show Records</h2><p>Show records help</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shapefile-cli show-records --help</span><br></pre></td></tr></table></figure>
+
+<p>Usage: <code>show-records [options] &lt;file&gt;</code></p>
+<p>Options:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-l, --limit &lt;n&gt;        returning records limit. accept any number. 0 means all records. default to 10</span><br><span class="line">-c, --columns &lt;items&gt;  returning columns include in the results. Multiple columns are supported by separater &quot;,&quot;. Default to all columns</span><br><span class="line">-g, --geom             includes geometry in the returned content</span><br><span class="line">-p, --pretty           output records with a pretty table format</span><br><span class="line">-h, --help             output usage information</span><br></pre></td></tr></table></figure>
+
+<p>Example - print a shpefiles’s top 10 records info with field name <code>STATE_NAME</code>, <code>RECID</code> and geometry in pretty table format.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">shapefile-cli show-records ~/Downloads/data/shp/USStates.shp -g -l 10 -c STATE_NAME,RECID</span><br><span class="line"></span><br><span class="line">╔══════════════╤═══════╤════════════════════════════════╗</span><br><span class="line">║ STATE_NAME   │ RECID │ geom                           ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ Washington   │ 1     │ [[&#123;&quot;x&quot;:-122.40074920654297,... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ Montana      │ 2     │ [[&#123;&quot;x&quot;:-111.4746322631836,&quot;... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ Maine        │ 3     │ [[&#123;&quot;x&quot;:-69.77778625488281,&quot;... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ North Dakota │ 4     │ [[&#123;&quot;x&quot;:-98.73005676269531,&quot;... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ South Dakota │ 5     │ [[&#123;&quot;x&quot;:-102.78793334960938,... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ Wyoming      │ 6     │ [[&#123;&quot;x&quot;:-104.05310821533203,... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ Wisconsin    │ 7     │ [[&#123;&quot;x&quot;:-87.74845123291016,&quot;... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ Idaho        │ 8     │ [[&#123;&quot;x&quot;:-117.02530670166016,... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ Vermont      │ 9     │ [[&#123;&quot;x&quot;:-73.25850677490234,&quot;... ║</span><br><span class="line">╟──────────────┼───────┼────────────────────────────────╢</span><br><span class="line">║ Minnesota    │ 10    │ [[&#123;&quot;x&quot;:-91.73021697998047,&quot;... ║</span><br><span class="line">╚══════════════╧═══════╧════════════════════════════════╝</span><br><span class="line"></span><br><span class="line">Reading complete. 10/51 record(s)</span><br><span class="line"></span><br><span class="line">Tips:</span><br><span class="line"> - set option -l, --limit to 0 to read all records</span><br><span class="line"> - use option -g, --geom to 0 to read all records with geometry</span><br><span class="line"> - use option -p, --pretty to return data with pretty table format</span><br><span class="line"> - use option -c, --column to return necessary fields. e.g. -c field1,field2 returns two fields</span><br></pre></td></tr></table></figure>
+
+<h2 id="Convert-to-GeoJson"><a href="#Convert-to-GeoJson" class="headerlink" title="Convert to GeoJson"></a>Convert to GeoJson</h2><p>Show records help</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shapefile-cli convert-geojson --help</span><br></pre></td></tr></table></figure>
+
+<p>Usage: <code>convert-geojson [options] &lt;file&gt;</code></p>
+<p>Options:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-c, --columns &lt;items&gt;  returning columns include in the results. Multiple columns are supported by separater &quot;,&quot;. Default to all columns</span><br><span class="line">-o, --output &lt;value&gt;   output file path. If only directory is specified, the same file name will be used. Default to the same folder of the sourceShapefile</span><br><span class="line">-h, --help             output usage information</span><br></pre></td></tr></table></figure>
+
+<p>Example - converts a shapefile to GeoJson format.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shapefile-cli convert-geojson ./tests/data/USStates.shp</span><br><span class="line"></span><br><span class="line">Conversion complete. New file is saved at ./tests/data/USStates.json.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://ginkgoch.com" target="_blank" rel="noopener">Ginkgoch Home Page</a></li>
+<li><a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">View on Github</a></li>
+<li><a href="https://github.com/ginkgoch/node-shapefile-cli/issues" target="_blank" rel="noopener">Report an Issue</a> or <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">Contact Author</a></li>
+</ul>
+
+            </div>
+</article>
+
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-compose/">docker-compose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ginkgoch/">ginkgoch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gis/">gis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-builder/">map builder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-io/">node-io</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/service/">service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slice/">slice</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tiling/">tiling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xyz-service/">xyz service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zoom-level/">zoom level</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

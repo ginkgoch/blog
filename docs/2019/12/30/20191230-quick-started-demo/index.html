@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="ginkgoch, gis, mapping">
+    <title>
+        Mapping for Fun - Ginkgoch Blog
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://ginkgoch.com/favicon-v2.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.1.min.css">
+    <script src="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.3.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function() {
+            $('.social-button').click(function() {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124252185-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-124252185-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4307304935160022",
+        enable_page_level_ads: true
+    });
+    </script>
+</head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
+        <a href="/" class="logo">
+            Ginkgoch
+        </a>
+    </h1>
+    <h2 class="desc">
+        Made cross-platform GIS mapping easy
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://ginkgoch.com">
+                        Home
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/ginkgoch">
+                        Github
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://twitter.com/ginkgoch1">
+                        Twitter
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/yun.ginkgoch.1">
+                        Facebook
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+            <h2 class="post-title">
+                Quick Started Demos for Map Core
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2019-12-30
+                </li>
+                <li>
+                    Ginkgoch
+                </li>
+            </ul>
+            <div class="post-content">
+                <p>This page represents several simple demos for <a href="https://github.com/ginkgoch/node-map" target="_blank" rel="noopener">pure map core library</a>. In this page, I don’t refer any other web, desktop or mobile frameworks to build rich UX application; but use few lines of code to show the power of its GIS functions.</p>
+<ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#prerequisite" target="_blank" rel="noopener">Prerequisite</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#demos" target="_blank" rel="noopener">Demos</a><ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#quick-started" target="_blank" rel="noopener">Quick Started</a><ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#render-a-simple-map" target="_blank" rel="noopener">Render a simple map</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#render-a-colorful-map" target="_blank" rel="noopener">Render a colorful map</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#tutorial-begins" target="_blank" rel="noopener">Tutorial Begins</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#use-geometries" target="_blank" rel="noopener">Use Geometries</a><ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#create-geometry-and-render-with-different-styles" target="_blank" rel="noopener">Create geometry and render with different styles</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#buffer-geometry-by-distance" target="_blank" rel="noopener">Buffer geometry by distance</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#other-spatial-operations" target="_blank" rel="noopener">Other spatial operations</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#use-styles" target="_blank" rel="noopener">Use Styles</a><ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#use-simple-styles" target="_blank" rel="noopener">Use simple styles</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#use-value-based-style" target="_blank" rel="noopener">Use value based style</a><ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#render-areas-based-on-values" target="_blank" rel="noopener">Render areas based on values</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#filter-and-render-areas-based-on-some-specific-values" target="_blank" rel="noopener">Filter and render areas based on some specific values</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#use-text-style" target="_blank" rel="noopener">Use Text Style</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><p>Before we kick start the demos, we need to do some preparations. </p>
+<ol>
+<li><a href="https://www.npmjs.com/package/canvas" target="_blank" rel="noopener">canvas</a> is a 3rd party graphics library that our map component relies on. It depends on Cairo v1.10.0 or later. Choose the corresponding command to install the dependencies.<ul>
+<li>macOS: <code>brew install pkg-config cairo pango libpng jpeg giflib librsvg</code></li>
+<li>Ubuntu: <code>sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev</code></li>
+<li><code>Fedora:</code>sudo yum install gcc-c++ cairo-devel pango-devel libjpeg-turbo-devel giflib-devel</li>
+<li>Solaris: <code>pkgin install cairo pango pkg-config xproto renderproto kbproto xextproto</code></li>
+<li><code>OpenBSD:</code>doas pkg_add cairo pango png jpeg giflib`</li>
+<li>Windows see <a href="https://github.com/Automattic/node-canvas/wiki/Installation:-Windows" target="_blank" rel="noopener">this wiki</a> for detail</li>
+</ul>
+</li>
+<li>Install the dependency with <code>yarn add canvas ginkgoch-map</code>.</li>
+</ol>
+<blockquote>
+<p>The demo required data (*.shp, *.json, *.csv) are located in the <code>data</code> folder in this parent folder for sharing data across multiple sample categories.</p>
+</blockquote>
+<h2 id="Demos"><a href="#Demos" class="headerlink" title="Demos"></a>Demos</h2><p>Each js file is a standalone demo. Execute it with <code>node [replace with js file name]</code>.</p>
+<h3 id="Quick-Started"><a href="#Quick-Started" class="headerlink" title="Quick Started"></a>Quick Started</h3><h4 id="Render-a-simple-map"><a href="#Render-a-simple-map" class="headerlink" title="Render a simple map"></a>Render a simple map</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-simple-map.js" target="_blank" rel="noopener">render-simple-map.js</a> represents how to load a shapefile and render into an image.</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/quick-started/render-simple-map.png" alt="render-simple-map"></p>
+<h4 id="Render-a-colorful-map"><a href="#Render-a-colorful-map" class="headerlink" title="Render a colorful map"></a>Render a colorful map</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-colorful-map.js" target="_blank" rel="noopener">render-colorful-map.js</a> represents how to load a shapefile, then extract its property table and find out the distinct field values. When we got the distinct values, it automatically generate a <code>ValueStyle</code> to set an exclusive <code>FillStyle</code> for each values. </p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/quick-started/render-colorful-map.png" alt="render-colorful-map"></p>
+<h3 id="Tutorial-Begins"><a href="#Tutorial-Begins" class="headerlink" title="Tutorial Begins"></a>Tutorial Begins</h3><p>From this section, I will introduce the very basic demos through geometry, spatial analyze, style renderer, source and layers. I try to use pretty simple demo for example with brief code to show you how to implement a small part in a GIS app. When you understand the very little functions, you could build up a complex and robust GIS app by putting them together.</p>
+<h3 id="Use-Geometries"><a href="#Use-Geometries" class="headerlink" title="Use Geometries"></a>Use Geometries</h3><h4 id="Create-geometry-and-render-with-different-styles"><a href="#Create-geometry-and-render-with-different-styles" class="headerlink" title="Create geometry and render with different styles"></a>Create geometry and render with different styles</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/create-geom.js" target="_blank" rel="noopener">create-geoms.js</a> represents how to create point, polygon and line geometries; then set a specific style base on various geometry type and render them into an image.</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/create-geoms.png" alt="create-geoms"></p>
+<h4 id="Buffer-geometry-by-distance"><a href="#Buffer-geometry-by-distance" class="headerlink" title="Buffer geometry by distance"></a>Buffer geometry by distance</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/spatial-buffer.js" target="_blank" rel="noopener">spatial-buffer.js</a> represents how to buffer a geometry with a specific distance. See the following images for difference.</p>
+<ul>
+<li><p>Buffers with <code>4</code> degrees</p>
+<p>  <img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/spatial-buffer.png" alt="spatial-buffer"></p>
+</li>
+<li><p>Buffers with <code>20</code> degrees</p>
+<p>  <img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/spatial-buffer-1.png" alt="spatial-buffer"></p>
+</li>
+</ul>
+<h4 id="Other-spatial-operations"><a href="#Other-spatial-operations" class="headerlink" title="Other spatial operations"></a>Other spatial operations</h4><p>We provides other <a href="https://ginkgoch.com/node-geom/classes/spatialops.html" target="_blank" rel="noopener">built-in spatial operations</a>, the other demos are in WIP…</p>
+<h3 id="Use-Styles"><a href="#Use-Styles" class="headerlink" title="Use Styles"></a>Use Styles</h3><h4 id="Use-simple-styles"><a href="#Use-simple-styles" class="headerlink" title="Use simple styles"></a>Use simple styles</h4><p>Actually, we already represents many basic styles within the previous demos. Such as <code>FillStyle</code>, <code>LineStyle</code> or <code>PointStyle</code>. So I will skip those styles and show you some other interesting styles.</p>
+<ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/create-geom.js" target="_blank" rel="noopener">create-geoms.js</a></li>
+</ul>
+<h4 id="Use-value-based-style"><a href="#Use-value-based-style" class="headerlink" title="Use value based style"></a>Use value based style</h4><p>Imagine a feature source that has some specific value I am interesting, while the others are not; within the interesting values, I also want to render different colors based on the values. <code>ValueStyle</code> will be the one to satisfy this scenario.</p>
+<p>Here represents two various scenarios for using this style.</p>
+<p>In folder <code>data/Africa</code>, we include an Africa shapefile. Here attaches the <code>top 3</code> records to show you how the field values structure.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>CODE</th>
+<th>COUNTRY</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>ALG</td>
+<td>Algeria</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ANG</td>
+<td>Angola</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ANG</td>
+<td>Angola</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>I have a cross platform (can run in macOS, Linux and Win so far) GUI application <a href="https://github.com/ginkgoch/node-shapefile-viewer/releases" target="_blank" rel="noopener">Ginkgoch Shapefile Viewer</a> that allows to load shapefile, and render on top of a shapefile. Then you can visually tell what the shapefile looks like and the table data it includes.</p>
+<p><img src="https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview.png" alt="Shapefile Viewer"></p>
+<p>If GUI is too heavy to you, here is also a <a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">command line tool</a> you could look into.</p>
+</blockquote>
+<h5 id="Render-areas-based-on-values"><a href="#Render-areas-based-on-values" class="headerlink" title="Render areas based on values"></a>Render areas based on values</h5><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/use-value-style.js" target="_blank" rel="noopener">use-value-style.js</a> represents how to set an exclusive fill colors based on field <code>CODE</code>.</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/use-value-style.png" alt="use-value-style"></p>
+<h5 id="Filter-and-render-areas-based-on-some-specific-values"><a href="#Filter-and-render-areas-based-on-some-specific-values" class="headerlink" title="Filter and render areas based on some specific values"></a>Filter and render areas based on some specific values</h5><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/render-filter-values.js" target="_blank" rel="noopener">render-filter-values.js</a> represents how to filter and render areas with field values <code>MAL</code>,  <code>ZAI</code> and <code>SUD</code> only.</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/render-filter-values.png" alt="render-filter-values"></p>
+<h4 id="Use-Text-Style"><a href="#Use-Text-Style" class="headerlink" title="Use Text Style"></a>Use Text Style</h4><p>Labels are pretty important for styling. We also support it. Check out <a href="styles/use-text-style">use-text-style.js</a> for how to use <code>TextStyle</code> to put text on the map. This style automatically ignore the overlapping labels. If some label for small area not drawn, try to zoom deeper and you could see it when there is enough space for this label and no overlapping labels around it.</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/use-text-style.png" alt="use-text-style"></p>
+<h3 id="Layers-and-Sources"><a href="#Layers-and-Sources" class="headerlink" title="Layers and Sources"></a>Layers and Sources</h3><p>As the samples represented previously, in the mean time, the <code>FeatureSource</code> and <code>FeatureLayer</code> are also used in the previous demos (e.g. <a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-colorful-map.js" target="_blank" rel="noopener">render-colorful-map.js</a>). Here I just emphasize there difference. </p>
+<ul>
+<li><code>FeatureSource</code> is a base class to help to fetch features from a specific map source data. We will create various kinds of map source by extending this base class. For example, we will use <code>ShapefileFeatureSource</code> to fetch features from <code>Shapefile</code> while<code>MemoryFeatureSource</code> is used to store temporary features in memory. There will be lots of kind of data sources in GIS region. I will introduce more later.</li>
+<li><code>FeatureLayer</code> is a major container of <code>FeatureSource</code> and <code>Style</code>. We can assume that <code>Layer</code> is utils to accommodate <code>FeatureSource</code> and <code>Style</code> for rendering your customized map surface.</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>In this page, I introduced some basic guide for <code>Ginkgoch</code> map core library. It is the very low level component of building a map application programmatically. I’m now planning to do some advanced guide to build RESTful APIs, or cross platform GUI applications. Hope you enjoy it. </p>
+<p>Thanks for reading, happy mapping !!!</p>
+
+            </div>
+</article>
+
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-compose/">docker-compose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ginkgoch/">ginkgoch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gis/">gis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-builder/">map builder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-io/">node-io</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/service/">service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slice/">slice</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tiling/">tiling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xyz-service/">xyz service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zoom-level/">zoom level</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

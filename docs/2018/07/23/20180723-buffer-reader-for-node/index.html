@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="ginkgoch, gis, mapping">
+    <title>
+        Mapping for Fun - Ginkgoch Blog
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://ginkgoch.com/favicon-v2.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.1.min.css">
+    <script src="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.3.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function() {
+            $('.social-button').click(function() {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124252185-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-124252185-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4307304935160022",
+        enable_page_level_ads: true
+    });
+    </script>
+</head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
+        <a href="/" class="logo">
+            Ginkgoch
+        </a>
+    </h1>
+    <h2 class="desc">
+        Made cross-platform GIS mapping easy
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://ginkgoch.com">
+                        Home
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/ginkgoch">
+                        Github
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://twitter.com/ginkgoch1">
+                        Twitter
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/yun.ginkgoch.1">
+                        Facebook
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+            <h2 class="post-title">
+                Buffer Reader for Node.JS
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2018-07-23
+                </li>
+                <li>
+                    Ginkgoch
+                </li>
+            </ul>
+            <div class="post-content">
+                <p><img src="/post-imgs/buffer-in-node.jpeg" alt="buffer in node.js"></p>
+<p>In Node.js, when we want to read continuous number or string from a <a href="https://cn.nodejs.org/api/buffer.html" target="_blank" rel="noopener">Buffer</a> instance, we have to maintain a position where we are reading at. To make it easy, here is a library to help to read <a href="https://cn.nodejs.org/api/buffer.html" target="_blank" rel="noopener">Buffer</a> instance easier.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i ginkgoch-buffer-reader --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm test</span><br></pre></td></tr></table></figure>
+
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><strong>Prepare for data</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> buffer = Buffer.alloc(<span class="number">4</span>);</span><br><span class="line">buffer.writeInt8(<span class="number">8</span>, <span class="number">0</span>);</span><br><span class="line">buffer.writeInt16LE(<span class="number">16</span>, <span class="number">1</span>);</span><br><span class="line">buffer.writeUInt32LE(<span class="number">32</span>, <span class="number">3</span>);</span><br><span class="line">buffer.writeDoubleBE(<span class="number">54.8765</span>, <span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>Without <code>Ginkgoch Buffer Reader</code></strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i1 = buffer.readInt8(<span class="number">0</span>);</span><br><span class="line"><span class="keyword">let</span> i2 = buffer.readInt16LE(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">let</span> i3 = buffer.readUInt32LE(<span class="number">3</span>);</span><br><span class="line"><span class="keyword">let</span> i4 = buffer.readDoubleBE(<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+
+<p>It is terrible to remember the length of the value type and manually accumulate the position; it is very easy to make mistake and hard to find out why. Even though we could create UT for our logic, but why not to make it easy and handle the headache to us?</p>
+<p><strong>With <code>Ginkgoch Buffer Reader</code></strong><br>It automatically manages the read position. You don’t need to manually calculate the position and type length anymore.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> BufferReader = <span class="built_in">require</span>(<span class="string">'ginkgoch-buffer-reader'</span>);</span><br><span class="line"><span class="keyword">let</span> br = <span class="keyword">new</span> BufferReader(buffer);</span><br><span class="line"><span class="keyword">let</span> i1 = br.nextInt8();</span><br><span class="line"><span class="keyword">let</span> i2 = br.nextInt16LE();</span><br><span class="line"><span class="keyword">let</span> i3 = br.nextUInt32LE();</span><br><span class="line"><span class="keyword">let</span> i4 = br.nextDoubleBE();</span><br></pre></td></tr></table></figure>
+
+<h2 id="API-List"><a href="#API-List" class="headerlink" title="API List"></a>API List</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(buffer: Buffer);</span><br><span class="line">seek(offset: number, fromBeginning = true);</span><br><span class="line">nextBuffer(length: number);</span><br><span class="line">nextString(length: number, encoding = 'utf-8');</span><br><span class="line">nextIn8();</span><br><span class="line">nextUInt8();</span><br><span class="line">nextUInt16LE();</span><br><span class="line">nextUInt16BE();</span><br><span class="line">nextInt16LE();</span><br><span class="line">nextInt16BE();</span><br><span class="line">nextUInt32LE();</span><br><span class="line">nextUInt32BE();</span><br><span class="line">nextInt32LE();</span><br><span class="line">nextInt32BE();</span><br><span class="line">nextFloatLE();</span><br><span class="line">nextFloatBE();</span><br><span class="line">nextDoubleLE();</span><br><span class="line">nextDoubleBE();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://ginkgoch.com" target="_blank" rel="noopener">Ginkgoch Home Page</a></li>
+<li><a href="https://github.com/ginkgoch/node-buffer-reader" target="_blank" rel="noopener">View on Github</a></li>
+<li><a href="https://github.com/ginkgoch/node-buffer-reader/issues" target="_blank" rel="noopener">Report an Issue</a> or <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">Contact Author</a></li>
+</ul>
+
+            </div>
+</article>
+
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-compose/">docker-compose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ginkgoch/">ginkgoch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gis/">gis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-builder/">map builder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-io/">node-io</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/service/">service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slice/">slice</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tiling/">tiling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xyz-service/">xyz service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zoom-level/">zoom level</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

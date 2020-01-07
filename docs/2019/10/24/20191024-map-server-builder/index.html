@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="ginkgoch, gis, mapping">
+    <title>
+        Mapping for Fun - Ginkgoch Blog
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://ginkgoch.com/favicon-v2.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.1.min.css">
+    <script src="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.3.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function() {
+            $('.social-button').click(function() {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124252185-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-124252185-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4307304935160022",
+        enable_page_level_ads: true
+    });
+    </script>
+</head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
+        <a href="/" class="logo">
+            Ginkgoch
+        </a>
+    </h1>
+    <h2 class="desc">
+        Made cross-platform GIS mapping easy
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://ginkgoch.com">
+                        Home
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/ginkgoch">
+                        Github
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://twitter.com/ginkgoch1">
+                        Twitter
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/yun.ginkgoch.1">
+                        Facebook
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+            <h2 class="post-title">
+                Ginkgoch Map Builder
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2019-10-24
+                </li>
+                <li>
+                    Ginkgoch
+                </li>
+            </ul>
+            <div class="post-content">
+                <p><a href="https://github.com/ginkgoch/node-map-server" target="_blank" rel="noopener">This project</a> is a map server template that could help you to build robust and customize map service quickly with Ginkgoch map library (<a href="https://github.com/ginkgoch/node-map/blob/develop/README.md" target="_blank" rel="noopener">Ginkgoch Map for NodeJS</a> is a map library written by NodeJS with full functional features on GIS application development).</p>
+<p><img src="https://github.com/ginkgoch/map-server-ui/raw/develop/docs/images/map-overview.png" alt="Demo Overview"></p>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><p>This is a project template with RESTful APIs as:</p>
+<ul>
+<li>Load a data as a source on a map</li>
+<li>Read all features from a specific GIS data</li>
+<li>Read all features as a table from a specific GIS data</li>
+<li>Spatial query on a data source including intersection, etc.</li>
+<li>Customize the themes of a source<ul>
+<li>Basic for area, line, POI and labels</li>
+<li>Advanced themes for value based styling</li>
+</ul>
+</li>
+<li>Map object serialize/de-serialize into a JSON string for storage</li>
+<li>A XYZ server is built-in with your own data source and customized themes.</li>
+<li>More… (a complete API document is WIP)</li>
+</ul>
+<h2 id="Run-the-server"><a href="#Run-the-server" class="headerlink" title="Run the server"></a>Run the server</h2><h3 id="Manually-build"><a href="#Manually-build" class="headerlink" title="Manually build"></a>Manually build</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># clone the repo</span><br><span class="line">git clone https://github.com/ginkgoch/node-map-server.git</span><br><span class="line"></span><br><span class="line"># install dependencies</span><br><span class="line">yarn</span><br><span class="line"></span><br><span class="line"># start server</span><br><span class="line">yarn serve</span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-with-Docker"><a href="#Run-with-Docker" class="headerlink" title="Run with Docker"></a>Run with Docker</h3><p>We provide the docker images on <a href="hub.docker.com">docker hub</a> for OPs team. Developers can also use it to quickly run this service quickly.</p>
+<h4 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h4><ul>
+<li>Docker</li>
+<li>Docker compose</li>
+</ul>
+<h4 id="Launch-server-and-ui-demo-with-docker-compose"><a href="#Launch-server-and-ui-demo-with-docker-compose" class="headerlink" title="Launch server and ui demo with docker compose"></a>Launch server and ui demo with <code>docker compose</code></h4><p>Docker compose is the easiest way to launch this server as well as a UI interface.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o docker-compose.yml https://gist.github.com/ginkgoch/5b3bc8c9e081a9389d78daa2ba4622b0/raw/fc6a5985ea83b127f093d91b8ab4df8cebc14ebf/map-server-docker-compose.yml &amp;&amp; docker-compose up</span><br></pre></td></tr></table></figure>
+
+<p>Once it launches, type <code>http://localhost:8080</code> in browser to try this demo.</p>
+<h4 id="Launch-server-with-docker-only"><a href="#Launch-server-with-docker-only" class="headerlink" title="Launch server with docker only"></a>Launch server with <code>docker</code> only</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name map-server -p 3000:3000 -d ginkgoch/map-server</span><br></pre></td></tr></table></figure>
+
+<h4 id="Launch-server-with-docker-and-mounte-a-physical-data-path"><a href="#Launch-server-with-docker-and-mounte-a-physical-data-path" class="headerlink" title="Launch server with docker and mounte a physical data path"></a>Launch server with <code>docker</code> and mounte a physical data path</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name map-server -p 3000:3000 -v <span class="string">"/Users/ginkgoch/Downloads/Africa_SHP/:/root/map-server/data/"</span> -d ginkgoch/map-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="What-is-the-difference-to-the-other-GIS-components"><a href="#What-is-the-difference-to-the-other-GIS-components" class="headerlink" title="What is the difference to the other GIS components?"></a>What is the difference to the other GIS components?</h3><p>The entire project including UI, server and its dependencies libraries are all written by NodeJS. If you already knew JavaScript, I hope you this could bring you a brand new experience to build a full functional GIS application with one programming language. </p>
+<h3 id="Why-do-I-need-a-customized-thematic-map"><a href="#Why-do-I-need-a-customized-thematic-map" class="headerlink" title="Why do I need a customized thematic map?"></a>Why do I need a customized thematic map?</h3><p>When you ask this question, I assume that you already have the experience to build map apps on browser with <code>OpenLayers</code>, <code>Google Map</code> or <code>Leaflet</code> etc. This might satisfy your requirement already. But when you have a GIS data (e.g. SHP file, Postgre or even CSV) that contains more precise vectors, or more properties on the records, or analyze on a region (e.g. find some records with some special condition in a random drawn area), it might be a headache to implement with the existing client based libraries. Because the 3rd party client libraries only provides restricted predefined query functions, styles etc. functions. In this case, setup a custom map server is a good choice and become a solution to extend your map application more. With your own server, you can also interact with the 3rd party client map libraries to provide better UX for applications.</p>
+<h3 id="Why-NodeJS"><a href="#Why-NodeJS" class="headerlink" title="Why NodeJS?"></a>Why NodeJS?</h3><h4 id="One-programming-langue-for-frontend-and-backend"><a href="#One-programming-langue-for-frontend-and-backend" class="headerlink" title="One programming langue for frontend and backend"></a>One programming langue for frontend and backend</h4><p>JavaScript is one of the most popular programming language in the world currently. It is also the required skills for UI developers. On the other hand, many small teams, groups, organizations or kickstart companies requires full stack developers, so JavaScript will be the most important skill in this part.</p>
+<p>In the GIS region, we know there are many famous client MAP libraries like <code>OpenLayers</code>, <code>Leaflet</code> or <code>Google</code> etc. It is pretty easy to build a browser based map view for your websites or web-apps. But if you want to setup your own map server cluster, you might need to learn to use <code>C#</code>, <code>JAVA</code>, cloud etc. This is not too many complete GIS solution with JavaScript.</p>
+<p>When I play around with NodeJS which allows me to build more interesting application on server side with JavaScript, so this project launches.</p>
+<h4 id="Thread-safe"><a href="#Thread-safe" class="headerlink" title="Thread safe"></a>Thread safe</h4><p>It is well-known that NodeJS runs in <code>single thread</code> and <code>event-loop</code>. I used to use many other GIS component with <code>C#</code> and <code>JAVA</code>, it has a bad experience to build high performance service. We need to consider the mutex lock on resource reading/appending in multi-thread.</p>
+<p>With NodeJS’ single thread mode, you don’t need to consider the thread safe issue; instead, we can focus more on the concrete business of your application.</p>
+<h4 id="I’m-worry-about-the-performance-building-in-NodeJS"><a href="#I’m-worry-about-the-performance-building-in-NodeJS" class="headerlink" title="I’m worry about the performance building in NodeJS"></a>I’m worry about the performance building in NodeJS</h4><p>Technically, NodeJS runs with V8 engine with single thread and I/O non-blocking mode, it seems has worse performance than the other techs, such as JAVA. But in the real world with high CPU performance, the gap becomes less and less. </p>
+<p>It really depends on the scenario of your application. For example:</p>
+<ol>
+<li>For CPU-intensive calculating, like huge amount number calculation, zero I/O processing, definitely, <code>JAVA</code> or <code>C#</code> will be a best choice.</li>
+<li>For IO-intensive process, like reading/writing files, NodeJS will be 3.4X better performance. (<a href="https://github.com/johnrjenson/JavaVsNode" target="_blank" rel="noopener">https://github.com/johnrjenson/JavaVsNode</a>)</li>
+</ol>
+<p>I don’t think the application is a pure I/O or CPU intensive application, but for the balanced workload application, I would say the performance will be about the same. </p>
+<p>One more thing I think the worsest thing for node is the memory restriction (e.g. 1G in 64-bit system). We need to either reduce the memory usage or manually expand the memory.</p>
+<h4 id="Mature-JavaScript-Echo-System"><a href="#Mature-JavaScript-Echo-System" class="headerlink" title="Mature JavaScript Echo-System"></a>Mature JavaScript Echo-System</h4><p>JavaScript has a great echo-system for full-stack technology. It is allow to build cross-platform website, service, desktop or even mobile applications. <code>Ginkgoch</code> will also provide those solutions on this cross-platform, various categories of GIS applications. (PS. it is now supported website, webserivce, desktop; and mobile is in my backlog).</p>
+<h2 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h2><p>Contact <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">ginkgoch@outlook.com</a> or <a href="https://github.com/ginkgoch/node-map-server/issues" target="_blank" rel="noopener">submit an issue</a>. Happy mapping 😎</p>
+
+            </div>
+</article>
+
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-compose/">docker-compose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ginkgoch/">ginkgoch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gis/">gis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-builder/">map builder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-io/">node-io</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/service/">service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slice/">slice</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tiling/">tiling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xyz-service/">xyz service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zoom-level/">zoom level</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

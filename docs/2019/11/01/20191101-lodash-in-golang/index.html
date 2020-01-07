@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="ginkgoch, gis, mapping">
+    <title>
+        Mapping for Fun - Ginkgoch Blog
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://ginkgoch.com/favicon-v2.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.1.min.css">
+    <script src="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.3.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function() {
+            $('.social-button').click(function() {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124252185-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-124252185-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4307304935160022",
+        enable_page_level_ads: true
+    });
+    </script>
+</head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
+        <a href="/" class="logo">
+            Ginkgoch
+        </a>
+    </h1>
+    <h2 class="desc">
+        Made cross-platform GIS mapping easy
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://ginkgoch.com">
+                        Home
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/ginkgoch">
+                        Github
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://twitter.com/ginkgoch1">
+                        Twitter
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/yun.ginkgoch.1">
+                        Facebook
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+            <h2 class="post-title">
+                Lodash in Golang Version
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2019-11-01
+                </li>
+                <li>
+                    Ginkgoch
+                </li>
+            </ul>
+            <div class="post-content">
+                <p><a href="github.com/ginkgoch/godash">This project</a> is lodash in golang version. A modern Golang utility library delivering modularity, performance &amp; extras.</p>
+<h2 id="Install-amp-Import"><a href="#Install-amp-Import" class="headerlink" title="Install &amp; Import"></a>Install &amp; Import</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get -u <span class="string">"github.com/ginkgoch/godash"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"github.com/ginkgoch/godash"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><ul>
+<li>Slice Example</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">items := godash.DashSlice&#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>&#125;</span><br><span class="line">chunked := godash.Chunk(items, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// out: [[a b] [c d]]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Collection Example</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">items := godash.DashSlice&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">result := godash.Shuffle(items)</span><br><span class="line"></span><br><span class="line"><span class="comment">// out: [2 5 4 3 1]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>More examples TBD…</li>
+</ul>
+<h2 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h2><p>This is a index of the <a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md" target="_blank" rel="noopener">complete API reference</a>.</p>
+<!-- vscode-markdown-toc -->
+<ul>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcCamelCase" target="_blank" rel="noopener">func  CamelCase</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcCamelCaseWithInit" target="_blank" rel="noopener">func  CamelCaseWithInit</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcCapitalize" target="_blank" rel="noopener">func  Capitalize</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcCountBy" target="_blank" rel="noopener">func  CountBy</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcEndsWith" target="_blank" rel="noopener">func  EndsWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcEndsWithFrom" target="_blank" rel="noopener">func  EndsWithFrom</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcEscape" target="_blank" rel="noopener">func  Escape</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcEscapeRegExp" target="_blank" rel="noopener">func  EscapeRegExp</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcEvery" target="_blank" rel="noopener">func  Every</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFill" target="_blank" rel="noopener">func  Fill</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFillInRange" target="_blank" rel="noopener">func  FillInRange</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFind" target="_blank" rel="noopener">func  Find</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFindFrom" target="_blank" rel="noopener">func  FindFrom</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFindIndex" target="_blank" rel="noopener">func  FindIndex</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFindIndexWith" target="_blank" rel="noopener">func  FindIndexWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFindLast" target="_blank" rel="noopener">func  FindLast</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFindLastFrom" target="_blank" rel="noopener">func  FindLastFrom</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFindLastIndex" target="_blank" rel="noopener">func  FindLastIndex</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFindLastIndexWith" target="_blank" rel="noopener">func  FindLastIndexWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFirst" target="_blank" rel="noopener">func  First</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFromPairs" target="_blank" rel="noopener">func  FromPairs</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcGroupBy" target="_blank" rel="noopener">func  GroupBy</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcHead" target="_blank" rel="noopener">func  Head</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIdentity" target="_blank" rel="noopener">func  Identity</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIdentityFloat" target="_blank" rel="noopener">func  IdentityFloat</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIdentityInt" target="_blank" rel="noopener">func  IdentityInt</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIdentityString" target="_blank" rel="noopener">func  IdentityString</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIncludes" target="_blank" rel="noopener">func  Includes</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIndexOf" target="_blank" rel="noopener">func  IndexOf</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcJoin" target="_blank" rel="noopener">func  Join</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcLast" target="_blank" rel="noopener">func  Last</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcLastIndexOf" target="_blank" rel="noopener">func  LastIndexOf</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcLowerFirst" target="_blank" rel="noopener">func  LowerFirst</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcNth" target="_blank" rel="noopener">func  Nth</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPad" target="_blank" rel="noopener">func  Pad</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPadLeft" target="_blank" rel="noopener">func  PadLeft</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPadLeftWith" target="_blank" rel="noopener">func  PadLeftWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPadRight" target="_blank" rel="noopener">func  PadRight</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPadRightWith" target="_blank" rel="noopener">func  PadRightWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPadWith" target="_blank" rel="noopener">func  PadWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcReduce" target="_blank" rel="noopener">func  Reduce</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcReduceRight" target="_blank" rel="noopener">func  ReduceRight</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcReduceRightWithInitial" target="_blank" rel="noopener">func  ReduceRightWithInitial</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcReduceWithInitial" target="_blank" rel="noopener">func  ReduceWithInitial</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcRepeat" target="_blank" rel="noopener">func  Repeat</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcReplace" target="_blank" rel="noopener">func  Replace</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcReplaceRegx" target="_blank" rel="noopener">func  ReplaceRegx</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSample" target="_blank" rel="noopener">func  Sample</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSize" target="_blank" rel="noopener">func  Size</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSome" target="_blank" rel="noopener">func  Some</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSplit" target="_blank" rel="noopener">func  Split</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSplitWithCountLimit" target="_blank" rel="noopener">func  SplitWithCountLimit</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcStartsWith" target="_blank" rel="noopener">func  StartsWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcStartsWithFrom" target="_blank" rel="noopener">func  StartsWithFrom</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTernary" target="_blank" rel="noopener">func  Ternary</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcToLower" target="_blank" rel="noopener">func  ToLower</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcToUpper" target="_blank" rel="noopener">func  ToUpper</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTrim" target="_blank" rel="noopener">func  Trim</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTrimEnd" target="_blank" rel="noopener">func  TrimEnd</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTrimEndWith" target="_blank" rel="noopener">func  TrimEndWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTrimStart" target="_blank" rel="noopener">func  TrimStart</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTrimStartWith" target="_blank" rel="noopener">func  TrimStartWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTrimWith" target="_blank" rel="noopener">func  TrimWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcUnescape" target="_blank" rel="noopener">func  Unescape</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcUpperFirst" target="_blank" rel="noopener">func  UpperFirst</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeAction" target="_blank" rel="noopener">type Action</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeComparison" target="_blank" rel="noopener">type Comparison</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeDashSlice" target="_blank" rel="noopener">type DashSlice</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcChunk" target="_blank" rel="noopener">func  Chunk</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcCompact" target="_blank" rel="noopener">func  Compact</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcConcat" target="_blank" rel="noopener">func  Concat</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcConcatSlices" target="_blank" rel="noopener">func  ConcatSlices</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcDifference" target="_blank" rel="noopener">func  Difference</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcDifferenceBy" target="_blank" rel="noopener">func  DifferenceBy</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcDifferenceWith" target="_blank" rel="noopener">func  DifferenceWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcDrop" target="_blank" rel="noopener">func  Drop</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcDropRight" target="_blank" rel="noopener">func  DropRight</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcDropWhile" target="_blank" rel="noopener">func  DropWhile</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcEach" target="_blank" rel="noopener">func  Each</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcEachRight" target="_blank" rel="noopener">func  EachRight</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFilter" target="_blank" rel="noopener">func  Filter</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFlatMap" target="_blank" rel="noopener">func  FlatMap</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFlatMapDeep" target="_blank" rel="noopener">func  FlatMapDeep</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFlatMapDepth" target="_blank" rel="noopener">func  FlatMapDepth</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFlatten" target="_blank" rel="noopener">func  Flatten</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFlattenDeep" target="_blank" rel="noopener">func  FlattenDeep</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcFlattenDepth" target="_blank" rel="noopener">func  FlattenDepth</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcForEach" target="_blank" rel="noopener">func  ForEach</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcForEachRight" target="_blank" rel="noopener">func  ForEachRight</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcInitial" target="_blank" rel="noopener">func  Initial</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIntersection" target="_blank" rel="noopener">func  Intersection</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIntersectionBy" target="_blank" rel="noopener">func  IntersectionBy</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcIntersectionWith" target="_blank" rel="noopener">func  IntersectionWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcMap" target="_blank" rel="noopener">func  Map</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcNewDashSlice" target="_blank" rel="noopener">func  NewDashSlice</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcNewDashSliceFromIntArray" target="_blank" rel="noopener">func  NewDashSliceFromIntArray</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPull" target="_blank" rel="noopener">func  Pull</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPullAll" target="_blank" rel="noopener">func  PullAll</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPullAllWith" target="_blank" rel="noopener">func  PullAllWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcPullAt" target="_blank" rel="noopener">func  PullAt</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcReject" target="_blank" rel="noopener">func  Reject</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcRemove" target="_blank" rel="noopener">func  Remove</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcReverse" target="_blank" rel="noopener">func  Reverse</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSampleSize" target="_blank" rel="noopener">func  SampleSize</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcShuffle" target="_blank" rel="noopener">func  Shuffle</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSlice" target="_blank" rel="noopener">func  Slice</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSortByFloat" target="_blank" rel="noopener">func  SortByFloat</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSortByInt" target="_blank" rel="noopener">func  SortByInt</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcSortByString" target="_blank" rel="noopener">func  SortByString</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTail" target="_blank" rel="noopener">func  Tail</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTake" target="_blank" rel="noopener">func  Take</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTakeRight" target="_blank" rel="noopener">func  TakeRight</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTakeRightWhile" target="_blank" rel="noopener">func  TakeRightWhile</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcTakeWhile" target="_blank" rel="noopener">func  TakeWhile</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcUnion" target="_blank" rel="noopener">func  Union</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcUnionBy" target="_blank" rel="noopener">func  UnionBy</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcUnionWith" target="_blank" rel="noopener">func  UnionWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcUniq" target="_blank" rel="noopener">func  Uniq</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcUniqBy" target="_blank" rel="noopener">func  UniqBy</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcUniqWith" target="_blank" rel="noopener">func  UniqWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcWithout" target="_blank" rel="noopener">func  Without</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcXor" target="_blank" rel="noopener">func  Xor</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcZip" target="_blank" rel="noopener">func  Zip</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcZipWith" target="_blank" rel="noopener">func  ZipWith</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#funcDashSliceMap" target="_blank" rel="noopener">func (DashSlice) Map</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeInitCamelCase" target="_blank" rel="noopener">type InitCamelCase</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeIteratee" target="_blank" rel="noopener">type Iteratee</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeIterateeToFloat" target="_blank" rel="noopener">type IterateeToFloat</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeIterateeToInt" target="_blank" rel="noopener">type IterateeToInt</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeIterateeToString" target="_blank" rel="noopener">type IterateeToString</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typePredicate" target="_blank" rel="noopener">type Predicate</a></li>
+<li><a href="https://github.com/ginkgoch/godash/blob/develop/REFERENCE.md#typeReducer" target="_blank" rel="noopener">type Reducer</a></li>
+</ul>
+<!-- vscode-markdown-toc-config
+    numbering=true
+    autoSave=true
+    /vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+            </div>
+</article>
+
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-compose/">docker-compose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ginkgoch/">ginkgoch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gis/">gis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-builder/">map builder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-io/">node-io</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/service/">service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slice/">slice</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tiling/">tiling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xyz-service/">xyz service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zoom-level/">zoom level</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>

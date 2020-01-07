@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="ginkgoch, gis, mapping">
+    <title>
+        Mapping for Fun - Ginkgoch Blog
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://ginkgoch.com/favicon-v2.png">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.1.min.css">
+    <script src="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.3.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function() {
+            $('.social-button').click(function() {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124252185-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-124252185-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4307304935160022",
+        enable_page_level_ads: true
+    });
+    </script>
+</head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
+        <a href="/" class="logo">
+            Ginkgoch
+        </a>
+    </h1>
+    <h2 class="desc">
+        Made cross-platform GIS mapping easy
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://ginkgoch.com">
+                        Home
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/ginkgoch">
+                        Github
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://twitter.com/ginkgoch1">
+                        Twitter
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/yun.ginkgoch.1">
+                        Facebook
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+            <h2 class="post-title">
+                
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2020-01-07
+                </li>
+                <li>
+                    Ginkgoch
+                </li>
+            </ul>
+            <div class="post-content">
+                <h1 id="Build-a-Customized-Map-Server"><a href="#Build-a-Customized-Map-Server" class="headerlink" title="Build a Customized Map Server"></a>Build a Customized Map Server</h1><p>In the previous page: <a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/README.md" target="_blank" rel="noopener">Quick Started Demos for Map Core</a>, I introduced the basic library of <code>Ginkgoch Map</code>. It allows developers to draw a map with shapefiles or features with thematic styles, then store it as an image on disk. It is a pretty simple and pure demo which could only guide to build some console utilities.</p>
+<p>But <code>Ginkgoch</code> is far more powerful than that. I used to announce that <code>Ginkgoch Map</code> library allows to build cross platform server, desktop and mobile applications with only JavaScript. So today, I will try to challenge to build an interactive map. </p>
+<ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#scenario" target="_blank" rel="noopener">Scenario</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#prerequisite" target="_blank" rel="noopener">Prerequisite</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#build-xyz-tile-service" target="_blank" rel="noopener">Build XYZ Tile Service</a><ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#create-a-simple-service-with-koa" target="_blank" rel="noopener">Create a simple service with KOA</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#create-the-map-tile-router" target="_blank" rel="noopener">Create the map tile router</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#service-ready" target="_blank" rel="noopener">Service ready</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#build-interactive-map-view-with-leaflet" target="_blank" rel="noopener">Build interactive map view with Leaflet</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#identify-the-countries-by-clicking" target="_blank" rel="noopener">Identify the countries by clicking</a><ul>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#identify---client" target="_blank" rel="noopener">Identify - Client</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#identify---server" target="_blank" rel="noopener">Identify - Server</a></li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#identify---complete" target="_blank" rel="noopener">Identify - Complete</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#summary" target="_blank" rel="noopener">Summary</a></li>
+</ul>
+<h2 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h2><p>I want to build an Africa map view only on browser, I have my own Shapefiles (Countries.shp, Africa.shp). I want to set my own color for those data. Besides the static map, I want to interact with the map. Click an area and identify the area I clicked and make it highlighted. See the demo at (<a href="https://github.com/ginkgoch/map-quick-started-demos/tree/develop/services" target="_blank" rel="noopener">https://github.com/ginkgoch/map-quick-started-demos/tree/develop/services</a>)</p>
+<p>This is how it looks like in the final. Let’s do it!</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/services/preview/preview-identify.png" alt="identify"></p>
+<h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><p>Again, <code>Ginkgoch Map</code> is a low level map library which only focus on building map. At this stage, we need to require some other framework to help us to build service, desktop, mobile application easier. Fortunately, <code>Ginkgoch Map</code> is compatible with work with them. e.g. work with KOA to build RESTful or web applications, Electron to build desktop and React Native for mobile. In the near future, I will write more documents to cover them. But in this article, let’s focus on map server or web more.</p>
+<ul>
+<li>Koa - a lightweight web framework for node</li>
+<li>Koa Router - a router engine for Koa framework</li>
+<li>Koa Body Parser - a body parser middleware</li>
+<li>Canvas - the native graphics engine for node</li>
+<li><strong>Ginkgoch Map - Ginkgoch map library for server side rendering</strong></li>
+<li>Leaflet - a front-end map library</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add @koa/router canvas ginkgoch-map koa koa-bodyparser koa-static leaflet</span><br></pre></td></tr></table></figure>
+
+<p>In the next step, I’m going to build a RESTful service with XYZ tile API.</p>
+<h2 id="Build-XYZ-Tile-Service"><a href="#Build-XYZ-Tile-Service" class="headerlink" title="Build XYZ Tile Service"></a>Build XYZ Tile Service</h2><h3 id="Create-a-simple-service-with-KOA"><a href="#Create-a-simple-service-with-KOA" class="headerlink" title="Create a simple service with KOA"></a>Create a simple service with KOA</h3><p>To setup a basic service is the first step. It is pretty easy to create a service with following code.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'koa-bodyparser'</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span> = <span class="built_in">require</span>(<span class="string">'koa-static'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = <span class="keyword">new</span> Koa();</span><br><span class="line"></span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * the client html and relative resources are hosted by `static` middleware </span></span><br><span class="line"><span class="comment"> * beneath the `assets` folder.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">server.use(<span class="keyword">static</span>(<span class="string">'./assets'</span>));</span><br><span class="line">server.use(bodyParser());</span><br><span class="line"></span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * register the tiled map router here</span></span><br><span class="line"><span class="comment"> * in the next section, we are going to build the router.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> mapRouter = <span class="built_in">require</span>(<span class="string">'./routes/map-router'</span>);</span><br><span class="line">server.use(mapRouter)</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Server is listening on port 3000'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-the-map-tile-router"><a href="#Create-the-map-tile-router" class="headerlink" title="Create the map tile router"></a>Create the map tile router</h3><p>We design the tile API as <code>GET: /maps/:name/:z/:x/:y</code>. <code>:name</code> is the name of your map state. <code>:z</code>, <code>:x</code> and <code>:y</code> mean the <code>zoom level</code>, <code>column</code> and <code>row</code> of a specific tile. </p>
+<p>With this API design, the router could implement like this <a href="routers/map-router.js">map-router.js</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** Note: </span></span><br><span class="line"><span class="comment"> * the demo source code is a little different,</span></span><br><span class="line"><span class="comment"> * here I put the code together for easier reading.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'@koa/router'</span>);</span><br><span class="line"><span class="keyword">const</span> controller = <span class="built_in">require</span>(<span class="string">'./map-controller'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> canvasImp = <span class="built_in">require</span>(<span class="string">'canvas'</span>);</span><br><span class="line"><span class="keyword">const</span> gk = <span class="built_in">require</span>(<span class="string">'ginkgoch-map'</span>).default.all;</span><br><span class="line"><span class="keyword">const</span> &#123;NativeFactory, ShapefileFeatureSource, FeatureLayer, FillStyle, MapEngine, Srs&#125; = gk;</span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * due to the RESTful service is stateless,</span></span><br><span class="line"><span class="comment"> * whenever getting one tile will create a map instance </span></span><br><span class="line"><span class="comment"> * which will slow down the performance.</span></span><br><span class="line"><span class="comment"> * so here we create a cache for map instances just reuse the map instance</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> mapStatesCache = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router();</span><br><span class="line">NativeFactory.registerFrom(canvasImp);</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/maps/:name/:z/:x/:y'</span>, <span class="keyword">async</span> ctx =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> &#123; name, x, y, z &#125; = ctx.params;</span><br><span class="line">    <span class="keyword">if</span> (!mapStatesCache.has(name)) &#123;</span><br><span class="line">        <span class="keyword">let</span> sourcePath = path.resolve(__dirname, <span class="string">`../../data/cntry02-900913.shp`</span>);</span><br><span class="line">        <span class="keyword">let</span> source = <span class="keyword">new</span> ShapefileFeatureSource(sourcePath);</span><br><span class="line">        <span class="keyword">let</span> layer = <span class="keyword">new</span> FeatureLayer(source);</span><br><span class="line">        layer.styles.push(<span class="keyword">new</span> FillStyle(<span class="string">'#f0f0f0'</span>, <span class="string">'#636363'</span>, <span class="number">1</span>));</span><br><span class="line">        <span class="keyword">let</span> mapEngine = <span class="keyword">new</span> MapEngine(<span class="number">256</span>, <span class="number">256</span>);</span><br><span class="line">        mapEngine.srs = <span class="keyword">new</span> Srs(<span class="string">'EPSG:900913'</span>);</span><br><span class="line">        mapEngine.pushLayer(layer);</span><br><span class="line">        mapStatesCache.set(name, mapEngine);</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> mapEngine = mapStatesCache.get(name);</span><br><span class="line">    <span class="keyword">let</span> mapImage = <span class="keyword">await</span> controller.xyz(mapEngine, z, x, y);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> buff = ctx.body = mapImage.toBuffer();</span><br><span class="line">    ctx.type = <span class="string">'png'</span>;</span><br><span class="line">    ctx.length = buff.length;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Service-ready"><a href="#Service-ready" class="headerlink" title="Service ready"></a>Service ready</h3><p>Let’s open a browser and type url <code>localhost:3000/maps/default/0/0/0</code>, the tile image with the world map will respond.</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/services/preview/tile-default-0-0-0.png" alt="tile-default-0-0-0"></p>
+<p>At this step, we know how to an API for XYZ tile. How could we build an interactive map? Let keep working on the front-end part in the next section.</p>
+<h3 id="Build-interactive-map-view-with-Leaflet"><a href="#Build-interactive-map-view-with-Leaflet" class="headerlink" title="Build interactive map view with Leaflet"></a>Build interactive map view with Leaflet</h3><p>In this section, we will work on front-end only - build interactive map view with <code>Leaflet</code> (you could choose any client map library such as <code>OpenLayers</code> as well).</p>
+<p>In our demo, we put all client code under <code>assets</code> folder and copy the <code>leaflet</code> related resources underneath the <code>assets/deps</code> folder. </p>
+<p>Then create <code>assets/index.html</code> as following:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>DEMO MAP UI - Ginkgoch<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"deps/leaflet.css"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    #mapContainer &#123;</span><br><span class="line">        width: 800px;</span><br><span class="line">        height: 600px;</span><br><span class="line">        margin: 0 auto;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"mapContainer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"deps/leaflet.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> mapView = L.map(<span class="string">'mapContainer'</span>).setView([<span class="number">51.505</span>, <span class="number">-0.09</span>], <span class="number">3</span>);</span></span><br><span class="line"><span class="javascript">        L.tileLayer(<span class="string">'http://localhost:3000/maps/default/&#123;z&#125;/&#123;x&#125;/&#123;y&#125;'</span>, &#123;</span></span><br><span class="line"><span class="javascript">					attribution: <span class="string">'Ginkgoch Map'</span>,</span></span><br><span class="line"><span class="javascript">          id: <span class="string">'ginkgoch-base-map'</span></span></span><br><span class="line">				&#125;).addTo(mapView);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>That’s all for our basic map application. I will try to make those steps as a template just help to build the server and client part easier later. With the power of <code>Leaflet</code>, you could drag to pan the map and scroll to zoom on the map.</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/services/preview/preview-basic-map.png" alt="preview-basic-map"></p>
+<h3 id="Identify-the-countries-by-clicking"><a href="#Identify-the-countries-by-clicking" class="headerlink" title="Identify the countries by clicking"></a>Identify the countries by clicking</h3><p>We have one last feature not implemented - <code>identify</code>. It is a pretty common operation which allows you to click on the map, find out what countries are intersected within the clicked area, and prompt a popup to show the information.</p>
+<h4 id="Identify-Client"><a href="#Identify-Client" class="headerlink" title="Identify - Client"></a>Identify - Client</h4><p>This time, we are working from client by clicking to send the clicked location.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">mapView.on(<span class="string">'click'</span>, e =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> latlng = &#123; <span class="attr">x</span>: e.latlng.lng, <span class="attr">y</span>: e.latlng.lat &#125;;</span><br><span class="line">    <span class="keyword">let</span> zoom = mapView.getZoom();</span><br><span class="line">    </span><br><span class="line">  	<span class="comment">// this method posts the `latlng` and `zoom` to another API </span></span><br><span class="line">   	<span class="comment">// to do the interaction with server.</span></span><br><span class="line">  	<span class="comment">// check the comments below.</span></span><br><span class="line">    postBack(<span class="string">'SPATIAL_IDENTIFY'</span>, &#123; latlng, zoom &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">postBack</span>(<span class="params">action, payload</span>) </span>&#123;</span><br><span class="line">  	<span class="comment">// here we introduce `axios` to help us for calling the APIs.</span></span><br><span class="line">  	<span class="comment">// I will create an API calls `POST: /maps/:name/do` later.</span></span><br><span class="line">    axios.post(<span class="string">'do'</span>, &#123; action, payload &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> highlightLayer = <span class="literal">undefined</span>;</span><br><span class="line">      </span><br><span class="line">      	<span class="comment">// find out the highlight layer whose type is `L.geoJSON`.</span></span><br><span class="line">        mapView.eachLayer(<span class="function"><span class="params">l</span> =&gt;</span> &#123; </span><br><span class="line">            <span class="keyword">if</span> (l.name === highlights) &#123;</span><br><span class="line">                highlightLayer = l;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">      </span><br><span class="line">      	<span class="comment">// if it doesn't exist, we will create one</span></span><br><span class="line">        <span class="keyword">if</span> (highlightLayer === <span class="literal">undefined</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> style = &#123; <span class="string">"color"</span>: <span class="string">"#ff7800"</span>, <span class="string">"opacity"</span>: <span class="number">0.65</span> &#125;;</span><br><span class="line">            highlightLayer = L.geoJSON([], &#123; style &#125;).bindPopup(<span class="function"><span class="params">layer</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> layer.feature.properties[<span class="string">'CNTRY_NAME'</span>];</span><br><span class="line">            &#125;).addTo(mapView);</span><br><span class="line">            highlightLayer.name = highlights;</span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">        <span class="comment">// clear the previous highlights if it has.</span></span><br><span class="line">        highlightLayer.clearLayers();</span><br><span class="line">      </span><br><span class="line">        <span class="comment">// fill new featres into the highlight layer and redraw.</span></span><br><span class="line">        highlightLayer.addData(res.data.features);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>It seems a little more code, but every line is useful (we can remove some, but our code avoid to create duplicated instances which will have better performance).</p>
+<h4 id="Identify-Server"><a href="#Identify-Server" class="headerlink" title="Identify - Server"></a>Identify - Server</h4><p>There are many ways to design the server side implementation. But due to we want to make this project as a template later, I will try to avoid to write duplicated code. So basically, we already have an <code>XYZ</code> API for fetching tile images. Then we only need one more post API to handle all the other interactions, such as this <code>identify</code> operation.</p>
+<p>So we will define a contract between client and server. It refers to the <code>redux</code> implementation, every post data comes with two factors: <code>action</code> and <code>payload</code>. <code>action</code> is a string to tell server what will do, <code>action</code> tells server, what will be used for the <code>action</code>. e.g. this scenario, we want to do the <code>identify</code>,  then the <code>action</code> could be <code>SPATIAL_IDENTIFY</code> which means I want to do a spatial analyze about identify (hope that makes sense). The <code>payload</code> will include where the identification location. </p>
+<p>Recall the client code, we post with this code: <code>postBack(&#39;SPATIAL_IDENTIFY&#39;, { latlng, zoom });</code> which means the clicked latitude, longitude and current map view’s zoom level.</p>
+<p>The server implementation:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">router.post(<span class="string">'/maps/:name/do'</span>, <span class="keyword">async</span> ctx =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> &#123; action, payload &#125; = ctx.request.body;</span><br><span class="line">    <span class="keyword">if</span> (action !== <span class="string">'SPATIAL_IDENTIFY'</span>) &#123;</span><br><span class="line">      	<span class="comment">// here we only handle the identify operation</span></span><br><span class="line">      	<span class="comment">// if we need to support more operations later,</span></span><br><span class="line">      	<span class="comment">// recommend to change to `switch` `case` and put the concrete</span></span><br><span class="line">      	<span class="comment">// operation implementation in a separate function.</span></span><br><span class="line">      	<span class="comment">// I will represent a demo later.</span></span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">`Not supported post action <span class="subst">$&#123;action&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> mapEngine = mapStatesCache.get(ctx.params.name);</span><br><span class="line">  	<span class="comment">// do the concrete intersection querying</span></span><br><span class="line">    <span class="keyword">let</span> features = <span class="keyword">await</span> mapEngine.intersection(<span class="keyword">new</span> Point(payload.latlng.x, payload.latlng.y), <span class="string">'WGS84'</span>, payload.zoom, <span class="number">5</span>);</span><br><span class="line">  </span><br><span class="line">  	<span class="comment">// due to the source data's SRS is in `EPSG:900913` </span></span><br><span class="line">  	<span class="comment">// while the `leaflet` accept the `WGS84`</span></span><br><span class="line">  	<span class="comment">// we can convert the returned features to `WGS84` on the server side</span></span><br><span class="line">    <span class="keyword">let</span> projection = <span class="keyword">new</span> Projection(<span class="string">'WGS84'</span>, mapEngine.srs.projection);</span><br><span class="line">    features = features.flatMap(<span class="function"><span class="params">f</span> =&gt;</span> f.features);</span><br><span class="line">    features.forEach(<span class="function"><span class="params">f</span> =&gt;</span> f.geometry = projection.inverse(f.geometry));</span><br><span class="line"></span><br><span class="line">    ctx.body = <span class="keyword">new</span> FeatureCollection(features).toJSON();</span><br><span class="line">    ctx.type = <span class="string">'json'</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="Identify-Complete"><a href="#Identify-Complete" class="headerlink" title="Identify - Complete"></a>Identify - Complete</h4><p>Now, let’s start the server by running <code>node index.js</code> in terminal and input the URL (<a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a>) in browser; click an area on the map and it will highlight; click again will popup the country name.</p>
+<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/services/preview/preview-identify.png" alt="identify"></p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>It is a pretty long doc, but you could understand the designing and concrete workflow to implement a GIS app. It can be much simpler, here we only uses <code>Ginkgoch map</code> basic APIs, later, we could start to use some high-level APIs to reduce the code.</p>
+<p>Happy Mapping!</p>
+
+            </div>
+</article>
+
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li></ul>
+
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-compose/">docker-compose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ginkgoch/">ginkgoch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gis/">gis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-builder/">map builder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-io/">node-io</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/service/">service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slice/">slice</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tiling/">tiling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xyz-service/">xyz service</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zoom-level/">zoom level</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>
