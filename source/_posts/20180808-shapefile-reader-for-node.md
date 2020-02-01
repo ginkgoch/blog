@@ -4,7 +4,7 @@ date: 2018-08-08
 tag: [ node, node-io, shapefile ]
 ---
 
-<center>![shapefile in node.js](/post-imgs/shapefile-for-node.png)</center>
+![shapefile in node.js](/post-imgs/shapefile-for-node.png)
 
 The shapefile format is a popular geospatial vector data format for geographic information system (GIS) software.
 This is a NodeJs library to help to read shapefiles from your disk. I will try to implement writer later. 

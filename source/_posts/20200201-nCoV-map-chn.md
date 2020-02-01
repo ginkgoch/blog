@@ -19,7 +19,7 @@ tag: [ nCoV map, 新型肺炎地区分布地图 ]
 ## 前言
 2020年刚开始，各钟不幸的消息满天飞。新型肺炎的蔓延，科比去世... 无时无刻让我感到痛楚。为了不给国家添乱，新年几天都在窝在家里。时不时拿起手机，观察一下现在病情蔓延情况。下面这张地图就是一张典型的GIS应用。
 
-![infection-cover-status-demo](tutorials/images/infection-cover-status-demo.png)
+![infection-cover-status-demo](/post-imgs/infection-cover-status-demo.png)
 
 每当我看到这张静态图时，很想要知道几个信息无法获知。
 1. 我们能通过颜色和图例比较一个省的确诊人数范围，看不到一个省具体患病人数。
