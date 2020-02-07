@@ -1,5 +1,5 @@
 ---
-title: Buffer Reader for Node.JS
+title: Buffer Reader for Node.JS is Open Source
 date: 2018-07-23
 tag: [ node, node-io ]
 ---

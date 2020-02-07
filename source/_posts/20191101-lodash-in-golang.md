@@ -1,5 +1,5 @@
 ---
-title: Lodash in Golang Version 
+title: Godash - Lodash for Go Open Source
 date: 2019-11-01
 tag: [ golang, go, lodash, slice, array ]
 ---

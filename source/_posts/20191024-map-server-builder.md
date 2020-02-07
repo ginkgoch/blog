@@ -1,5 +1,5 @@
 ---
-title: Ginkgoch Map Builder
+title: Map Builder Platform Open Source
 date: 2019-10-24
 tag: [ ginkgoch, map server, map builder, docker, docker-compose ]
 ---

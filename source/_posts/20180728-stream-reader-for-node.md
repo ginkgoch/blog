@@ -1,5 +1,5 @@
 ---
-title: Stream Reader for Node.JS
+title: Stream Reader for Node.JS is Open Source
 date: 2018-07-28
 tag: [ node, node-io ]
 ---

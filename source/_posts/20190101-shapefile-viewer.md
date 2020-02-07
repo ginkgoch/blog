@@ -1,5 +1,5 @@
 ---
-title: Shapefile Viewer
+title: Cross-Platform Shapefile Viewer for Desktop Released
 date: 2019-01-01
 tag: [ node, node-io, shapefile ]
 ---

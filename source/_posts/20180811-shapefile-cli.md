@@ -1,5 +1,5 @@
 ---
-title: Shapefile Command Line Tool
+title: Shapefile CLI v1.0 Released
 date: 2018-08-11
 tag: [ map, shapefile, gis tools ]
 ---

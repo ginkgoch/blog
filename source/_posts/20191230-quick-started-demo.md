@@ -1,5 +1,5 @@
 ---
-title: Quick Started Demos for Map Core
+title: Quick Started Demos for Ginkgoch Map SDK
 date: 2019-12-30
 tag: [ javascript, gis, map, service, xyz service, tiling, zoom level ]
 ---

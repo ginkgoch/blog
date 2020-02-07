@@ -1,13 +1,14 @@
 ---
-title: Shapefile Reader for Node.JS
+title: Shapefile Reader for Node.js is Open Source
 date: 2018-08-08
 tag: [ node, node-io, shapefile ]
 ---
 
 ![shapefile in node.js](/post-imgs/shapefile-for-node.png)
 
-The shapefile format is a popular geospatial vector data format for geographic information system (GIS) software.
-This is a NodeJs library to help to read shapefiles from your disk. I will try to implement writer later. 
+A shapefile is a simple, nontopological format for storing the geometric location and attribute information of geographic features. Geographic features in a shapefile can be represented by points, lines, or polygons (areas). The workspace containing shapefiles may also contain dBASE tables, which can store additional attributes that can be joined to a shapefile's features.
+
+`ginkgoch-shapefile-reader` is a Node.js library to help to read shapefiles from your disk. I will try to implement writer later. 
 
 ## Install
 ```terminal

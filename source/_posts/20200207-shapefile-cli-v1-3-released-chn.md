@@ -1,6 +1,7 @@
 ---
 title: Shapefile 命令行工具 v1.3.1 发布
 date: 2020-02-07
+desc: 一个在终端窗口查看Shapefile的轻量级利器。
 tag: [ map, shapefile, gis tools ]
 ---
 Shapefile文件是美国ESRI公司发布的文件格式，因其ArcGIS软件的推广而得到了普遍的使用，是现在GIS领域使用最为广泛的矢量数据格式。官方称Shapefile是一种用于存储地理要素的几何位置和属性信息的非拓扑简单格式。
