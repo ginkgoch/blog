@@ -1,7 +1,7 @@
 ---
 title: Shapefile Command Line Tool
 date: 2018-08-11
-tag: [ node, node-io, shapefile ]
+tag: [ map, shapefile, gis tools ]
 ---
 
 ![shapefile cli](/post-imgs/shapefile-cli.gif)

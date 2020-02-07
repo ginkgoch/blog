@@ -100,118 +100,41 @@
     </nav>
 </header>
                 <main class="main">
-                    
-<section class="posts">
+                    <article class="post">
     
-        <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2018/08/11/20180811-shapefile-cli/">
-                            Shapefile Command Line Tool
-                        </a>
-                    </h1>
+            <h2 class="post-title">
+                Shapefile 命令行工具 v1.3.1 发布
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2020-02-07
+                </li>
+                <li>
+                    Ginkgoch
+                </li>
+            </ul>
+            <div class="post-content">
+                <p>Shapefile文件是美国ESRI公司发布的文件格式，因其ArcGIS软件的推广而得到了普遍的使用，是现在GIS领域使用最为广泛的矢量数据格式。官方称Shapefile是一种用于存储地理要素的几何位置和属性信息的非拓扑简单格式。</p>
+<p>今天对应一个老项目进行了一个小升级。新增一些新功能来提升使用性，升级底层库，提升性能和准确性。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn global add ginkgoch-shapefile-cli</span><br><span class="line"></span><br><span class="line">shapefile-cli -h</span><br></pre></td></tr></table></figure>
 
-                    <ul class="post-date">
-                        <li>
-                            August 11, 2018
-                        </li>
-                        <li>
-                            Ginkgoch
-                        </li>
-                    </ul>
-                    
-                        <div class="post-cover">
-                            <img src="/post-imgs/shapefile-cli.gif">
-                        </div>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2018/08/11/20180811-shapefile-cli/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-        <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2018/08/08/20180808-shapefile-reader-for-node/">
-                            Shapefile Reader for Node.JS
-                        </a>
-                    </h1>
+<h3 id="更新日志-v1-3-1"><a href="#更新日志-v1-3-1" class="headerlink" title="更新日志 v1.3.1"></a>更新日志 v1.3.1</h3><ul>
+<li>更新了底层库，使用最新的<code>ginkgoch-map</code>版本，对于性能和准确度都有很大提升。</li>
+<li>新增投影转换，生成一个新的shapefile。</li>
+<li>新增服务模式，启动后脱离终端窗口，通过浏览器查看shapefile的基础信息。<br>  <img src="/post-imgs/shapefile-cli-serve.png" alt="shapefile-cli-serve"></li>
+<li>新增创建索引文件功能，主要是为配合<code>ginkgoch-map</code>上层应用开发提高渲染和查询性能。</li>
+<li>修改了一些小的bug。</li>
+</ul>
+<h3 id="历史更新"><a href="#历史更新" class="headerlink" title="历史更新"></a>历史更新</h3><ul>
+<li>新增显示Shapefile头文件信息。</li>
+<li>新增显示Shapefile配套DBase文件的列信息。</li>
+<li>新增转换Shapefile为GeoJSON功能。</li>
+<li>新增显示Shapefile矢量信息。</li>
+</ul>
+<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">https://github.com/ginkgoch/node-shapefile-cli</a></p>
 
-                    <ul class="post-date">
-                        <li>
-                            August 8, 2018
-                        </li>
-                        <li>
-                            Ginkgoch
-                        </li>
-                    </ul>
-                    
-                        <div class="post-cover">
-                            <img src="/post-imgs/shapefile-for-node.png">
-                        </div>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2018/08/08/20180808-shapefile-reader-for-node/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-        <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2018/07/28/20180728-stream-reader-for-node/">
-                            Stream Reader for Node.JS
-                        </a>
-                    </h1>
-
-                    <ul class="post-date">
-                        <li>
-                            July 28, 2018
-                        </li>
-                        <li>
-                            Ginkgoch
-                        </li>
-                    </ul>
-                    
-                        <div class="post-cover">
-                            <img src="/post-imgs/stream-in-node.jpeg">
-                        </div>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2018/07/28/20180728-stream-reader-for-node/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-        <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2018/07/23/20180723-buffer-reader-for-node/">
-                            Buffer Reader for Node.JS
-                        </a>
-                    </h1>
-
-                    <ul class="post-date">
-                        <li>
-                            July 23, 2018
-                        </li>
-                        <li>
-                            Ginkgoch
-                        </li>
-                    </ul>
-                    
-                        <div class="post-cover">
-                            <img src="/post-imgs/buffer-in-node.jpeg">
-                        </div>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2018/07/23/20180723-buffer-reader-for-node/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-</section>
+            </div>
+</article>
 
                 </main>
                 <aside class="aside">
