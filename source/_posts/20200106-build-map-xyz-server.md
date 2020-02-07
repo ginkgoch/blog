@@ -1,5 +1,5 @@
 ---
-title: Build a Customized XYZ Map Server with Ginkgoch MAP SDK
+title: Build a XYZ Map Server with MAP SDK
 date: 2020-01-06
 tag: [ javascript, gis, map, service, xyz service, tiling, zoom level ]
 ---
