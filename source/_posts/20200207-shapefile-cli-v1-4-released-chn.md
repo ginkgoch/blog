@@ -1,5 +1,5 @@
 ---
-title: Shapefile 命令行工具 v1.3.1 发布
+title: Shapefile 命令行工具 v1.4 发布
 date: 2020-02-07
 desc: 一个在终端窗口查看Shapefile的轻量级利器。
 tag: [ map, shapefile, gis tools ]
@@ -15,7 +15,7 @@ yarn global add ginkgoch-shapefile-cli
 shapefile-cli -h
 ```
 
-### 更新日志 v1.3.1
+### 更新日志 v1.4
 * 更新了底层库，使用最新的`ginkgoch-map`版本，对于性能和准确度都有很大提升。
 * 新增投影转换，生成一个新的shapefile。
 * 新增服务模式，启动后脱离终端窗口，通过浏览器查看shapefile的基础信息。 

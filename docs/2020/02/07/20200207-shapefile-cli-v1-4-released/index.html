@@ -103,7 +103,7 @@
                     <article class="post">
     
             <h2 class="post-title">
-                Shapefile 命令行工具 v1.3.1 发布
+                Shapefile CLI v1.4 Released
             </h2>
             <ul class="post-date">
                 <li>
@@ -114,24 +114,30 @@
                 </li>
             </ul>
             <div class="post-content">
-                <p>Shapefile文件是美国ESRI公司发布的文件格式，因其ArcGIS软件的推广而得到了普遍的使用，是现在GIS领域使用最为广泛的矢量数据格式。官方称Shapefile是一种用于存储地理要素的几何位置和属性信息的非拓扑简单格式。</p>
-<p>今天对应一个老项目进行了一个小升级。新增一些新功能来提升使用性，升级底层库，提升性能和准确性。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn global add ginkgoch-shapefile-cli</span><br><span class="line"></span><br><span class="line">shapefile-cli -h</span><br></pre></td></tr></table></figure>
+                <p>A shapefile is a simple, nontopological format for storing the geometric location and attribute information of geographic features. Geographic features in a shapefile can be represented by points, lines, or polygons (areas). The workspace containing shapefiles may also contain dBASE tables, which can store additional attributes that can be joined to a shapefile’s features.</p>
+<p>Today, I made a new release of my old project <code>node-shapefile-cli</code> with a set of new features for better experience; upgraded the core implementation for better performance and more precise vectors.</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn global add ginkgoch-shapefile-cli</span><br><span class="line"></span><br><span class="line">shapefile-cli -h</span><br></pre></td></tr></table></figure>
 
-<h3 id="更新日志-v1-3-1"><a href="#更新日志-v1-3-1" class="headerlink" title="更新日志 v1.3.1"></a>更新日志 v1.3.1</h3><ul>
-<li>更新了底层库，使用最新的<code>ginkgoch-map</code>版本，对于性能和准确度都有很大提升。</li>
-<li>新增投影转换，生成一个新的shapefile。</li>
-<li>新增服务模式，启动后脱离终端窗口，通过浏览器查看shapefile的基础信息。<br>  <img src="/post-imgs/shapefile-cli-serve.png" alt="shapefile-cli-serve"></li>
-<li>新增创建索引文件功能，主要是为配合<code>ginkgoch-map</code>上层应用开发提高渲染和查询性能。</li>
-<li>修改了一些小的bug。</li>
+<h3 id="Change-Logs-v1-4"><a href="#Change-Logs-v1-4" class="headerlink" title="Change Logs v1.4"></a>Change Logs v1.4</h3><ul>
+<li><p>Upgrade the core implementation, better performance and accurate result.</p>
+</li>
+<li><p>Add a new feature to re-project a shapefile to a new shapefile with a specified CRS.</p>
+</li>
+<li><p>Add <code>serve</code> command to launch a server to support browse Shapefile information on browser.</p>
+<p>  <img src="/post-imgs/shapefile-cli-serve.png" alt="shapefile-cli-serve"></p>
+</li>
+<li><p>Add <code>build-index</code> command to build spatial index file for a corresponding shapefile. The index files provide better query performance for upper-level application that is build around <code>ginkgoch-map</code>.</p>
+</li>
+<li><p>Some minor bugs fix.</p>
+</li>
 </ul>
-<h3 id="历史更新"><a href="#历史更新" class="headerlink" title="历史更新"></a>历史更新</h3><ul>
-<li>新增显示Shapefile头文件信息。</li>
-<li>新增显示Shapefile配套DBase文件的列信息。</li>
-<li>新增转换Shapefile为GeoJSON功能。</li>
-<li>新增显示Shapefile矢量信息。</li>
+<h3 id="History-Change-Logs"><a href="#History-Change-Logs" class="headerlink" title="History Change Logs"></a>History Change Logs</h3><ul>
+<li>Add <code>show-header</code> to print Shapefile with table or JSON format.</li>
+<li>Add <code>show-fields</code> to print Shapefile fields information with table or JSON format.</li>
+<li>Add <code>show-records</code> to print Shapefile records. It also provides filter to reduce the print record count.</li>
+<li>Add <code>convert-geojson</code> to convert shapefile to GeoJSON format.</li>
 </ul>
-<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">https://github.com/ginkgoch/node-shapefile-cli</a></p>
+<h3 id="Project-Repository"><a href="#Project-Repository" class="headerlink" title="Project Repository"></a>Project Repository</h3><p><a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">https://github.com/ginkgoch/node-shapefile-cli</a></p>
 
             </div>
 </article>

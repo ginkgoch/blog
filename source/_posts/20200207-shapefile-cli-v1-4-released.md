@@ -1,5 +1,5 @@
 ---
-title: Shapefile CLI v1.3 Released
+title: Shapefile CLI v1.4 Released
 date: 2020-02-07
 tag: [ map, shapefile, gis tools ]
 ---
@@ -14,7 +14,7 @@ yarn global add ginkgoch-shapefile-cli
 shapefile-cli -h
 ```
 
-### Change Logs v1.3.1
+### Change Logs v1.4
 * Upgrade the core implementation, better performance and accurate result.
 * Add a new feature to re-project a shapefile to a new shapefile with a specified CRS.
 * Add `serve` command to launch a server to support browse Shapefile information on browser.
