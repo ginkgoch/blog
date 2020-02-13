@@ -6,6 +6,8 @@ tag: [ map, shapefile, gis tools ]
 Today, I made a new release of my old project `node-shapefile-cli` with a set of new features for better experience; upgraded the core implementation for better performance and more precise vectors.
 <!-- more --> 
 
+[中文请看这里](https://blog.csdn.net/Ginkgoch/article/details/104231918)
+
 > A shapefile is a simple, nontopological format for storing the geometric location and attribute information of geographic features. Geographic features in a shapefile can be represented by points, lines, or polygons (areas). The workspace containing shapefiles may also contain dBASE tables, which can store additional attributes that can be joined to a shapefile's features.
 
 ### Installation
