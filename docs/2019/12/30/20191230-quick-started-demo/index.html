@@ -163,19 +163,19 @@
 </blockquote>
 <h2 id="Demos"><a href="#Demos" class="headerlink" title="Demos"></a>Demos</h2><p>Each js file is a standalone demo. Execute it with <code>node [replace with js file name]</code>.</p>
 <h3 id="Quick-Started"><a href="#Quick-Started" class="headerlink" title="Quick Started"></a>Quick Started</h3><h4 id="Render-a-simple-map"><a href="#Render-a-simple-map" class="headerlink" title="Render a simple map"></a>Render a simple map</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-simple-map.js" target="_blank" rel="noopener">render-simple-map.js</a> represents how to load a shapefile and render into an image.</p>
-<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/quick-started/render-simple-map.png" alt="render-simple-map"></p>
+<p><img src="/post-imgs/20191230/render-simple-map.png" alt="render-simple-map"></p>
 <h4 id="Render-a-colorful-map"><a href="#Render-a-colorful-map" class="headerlink" title="Render a colorful map"></a>Render a colorful map</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-colorful-map.js" target="_blank" rel="noopener">render-colorful-map.js</a> represents how to load a shapefile, then extract its property table and find out the distinct field values. When we got the distinct values, it automatically generate a <code>ValueStyle</code> to set an exclusive <code>FillStyle</code> for each values. </p>
-<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/quick-started/render-colorful-map.png" alt="render-colorful-map"></p>
+<p><img src="/post-imgs/20191230/render-colorful-map.png" alt="render-colorful-map"></p>
 <h3 id="Tutorial-Begins"><a href="#Tutorial-Begins" class="headerlink" title="Tutorial Begins"></a>Tutorial Begins</h3><p>From this section, I will introduce the very basic demos through geometry, spatial analyze, style renderer, source and layers. I try to use pretty simple demo for example with brief code to show you how to implement a small part in a GIS app. When you understand the very little functions, you could build up a complex and robust GIS app by putting them together.</p>
 <h3 id="Use-Geometries"><a href="#Use-Geometries" class="headerlink" title="Use Geometries"></a>Use Geometries</h3><h4 id="Create-geometry-and-render-with-different-styles"><a href="#Create-geometry-and-render-with-different-styles" class="headerlink" title="Create geometry and render with different styles"></a>Create geometry and render with different styles</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/create-geom.js" target="_blank" rel="noopener">create-geoms.js</a> represents how to create point, polygon and line geometries; then set a specific style base on various geometry type and render them into an image.</p>
-<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/create-geoms.png" alt="create-geoms"></p>
+<p><img src="/post-imgs/20191230/create-geoms.png" alt="create-geoms"></p>
 <h4 id="Buffer-geometry-by-distance"><a href="#Buffer-geometry-by-distance" class="headerlink" title="Buffer geometry by distance"></a>Buffer geometry by distance</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/spatial-buffer.js" target="_blank" rel="noopener">spatial-buffer.js</a> represents how to buffer a geometry with a specific distance. See the following images for difference.</p>
 <ul>
 <li><p>Buffers with <code>4</code> degrees</p>
-<p>  <img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/spatial-buffer.png" alt="spatial-buffer"></p>
+<p>  <img src="/post-imgs/20191230/spatial-buffer.png" alt="spatial-buffer"></p>
 </li>
 <li><p>Buffers with <code>20</code> degrees</p>
-<p>  <img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/spatial-buffer-1.png" alt="spatial-buffer"></p>
+<p>  <img src="/post-imgs/20191230/spatial-buffer-1.png" alt="spatial-buffer"></p>
 </li>
 </ul>
 <h4 id="Other-spatial-operations"><a href="#Other-spatial-operations" class="headerlink" title="Other spatial operations"></a>Other spatial operations</h4><p>We provides other <a href="https://ginkgoch.com/node-geom/classes/spatialops.html" target="_blank" rel="noopener">built-in spatial operations</a>, the other demos are in WIP…</p>
@@ -212,15 +212,15 @@
 </tbody></table>
 <blockquote>
 <p>I have a cross platform (can run in macOS, Linux and Win so far) GUI application <a href="https://github.com/ginkgoch/node-shapefile-viewer/releases" target="_blank" rel="noopener">Ginkgoch Shapefile Viewer</a> that allows to load shapefile, and render on top of a shapefile. Then you can visually tell what the shapefile looks like and the table data it includes.</p>
-<p><img src="https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview.png" alt="Shapefile Viewer"></p>
+<p><img src="/post-imgs/20191230/overview.png" alt="Shapefile Viewer"></p>
 <p>If GUI is too heavy to you, here is also a <a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">command line tool</a> you could look into.</p>
 </blockquote>
 <h5 id="Render-areas-based-on-values"><a href="#Render-areas-based-on-values" class="headerlink" title="Render areas based on values"></a>Render areas based on values</h5><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/use-value-style.js" target="_blank" rel="noopener">use-value-style.js</a> represents how to set an exclusive fill colors based on field <code>CODE</code>.</p>
-<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/use-value-style.png" alt="use-value-style"></p>
+<p><img src="/post-imgs/20191230/use-value-style.png" alt="use-value-style"></p>
 <h5 id="Filter-and-render-areas-based-on-some-specific-values"><a href="#Filter-and-render-areas-based-on-some-specific-values" class="headerlink" title="Filter and render areas based on some specific values"></a>Filter and render areas based on some specific values</h5><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/render-filter-values.js" target="_blank" rel="noopener">render-filter-values.js</a> represents how to filter and render areas with field values <code>MAL</code>,  <code>ZAI</code> and <code>SUD</code> only.</p>
-<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/render-filter-values.png" alt="render-filter-values"></p>
+<p><img src="/post-imgs/20191230/render-filter-values.png" alt="render-filter-values"></p>
 <h4 id="Use-Text-Style"><a href="#Use-Text-Style" class="headerlink" title="Use Text Style"></a>Use Text Style</h4><p>Labels are pretty important for styling. We also support it. Check out <a href="styles/use-text-style">use-text-style.js</a> for how to use <code>TextStyle</code> to put text on the map. This style automatically ignore the overlapping labels. If some label for small area not drawn, try to zoom deeper and you could see it when there is enough space for this label and no overlapping labels around it.</p>
-<p><img src="https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/use-text-style.png" alt="use-text-style"></p>
+<p><img src="/post-imgs/20191230/use-text-style.png" alt="use-text-style"></p>
 <h3 id="Layers-and-Sources"><a href="#Layers-and-Sources" class="headerlink" title="Layers and Sources"></a>Layers and Sources</h3><p>As the samples represented previously, in the mean time, the <code>FeatureSource</code> and <code>FeatureLayer</code> are also used in the previous demos (e.g. <a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-colorful-map.js" target="_blank" rel="noopener">render-colorful-map.js</a>). Here I just emphasize there difference. </p>
 <ul>
 <li><code>FeatureSource</code> is a base class to help to fetch features from a specific map source data. We will create various kinds of map source by extending this base class. For example, we will use <code>ShapefileFeatureSource</code> to fetch features from <code>Shapefile</code> while<code>MemoryFeatureSource</code> is used to store temporary features in memory. There will be lots of kind of data sources in GIS region. I will introduce more later.</li>

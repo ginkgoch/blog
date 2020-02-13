@@ -19,7 +19,7 @@ tag: [ nCoV map, 新型肺炎地区分布地图 ]
 - [写在最后](#写在最后)
 
 ## 前言
-![infection-cover-status-demo](/post-imgs/infection-cover-status-demo.png)
+![infection-cover-status-demo](/post-imgs/20200201/infection-cover-status-demo.png)
 
 每当我看到这张静态图时，很想要知道几个信息无法获知。
 1. 我们能通过颜色和图例比较一个省的确诊人数范围，看不到一个省具体患病人数。
@@ -107,7 +107,7 @@ fs.writeFileSync(path.resolve(__dirname, './images/tutorial-01-world.png'), worl
 node tutorial-01.js
 ```
 
-![tutorial-01-world.png](/post-imgs/tutorial-01-world.png)
+![tutorial-01-world.png](/post-imgs/20200201/tutorial-01-world.png)
 
 ### 叠加中国数据
 
@@ -133,7 +133,7 @@ fs.writeFileSync(path.resolve(__dirname, './images/tutorial-01-default.png'), im
 
 现在再打开图片`tutorial-01-default.png`, 注意查看中国的数据已经叠加成功了。
 
-![tutorial-01-default.png](/post-imgs/tutorial-01-default.png)
+![tutorial-01-default.png](/post-imgs/20200201/tutorial-01-default.png)
 
 ### 调整可视范围
 
@@ -148,7 +148,7 @@ let image = await mapEngine.image(chinaEnvelope);
 fs.writeFileSync(path.resolve(__dirname, './images/tutorial-01-china.png'), image.toBuffer());
 ```
 
-![tutorial-01-china.png](/post-imgs/tutorial-01-china.png)
+![tutorial-01-china.png](/post-imgs/20200201/tutorial-01-china.png)
 
 ### 连接动态数据
 
@@ -156,7 +156,7 @@ fs.writeFileSync(path.resolve(__dirname, './images/tutorial-01-china.png'), imag
 
 首先，我们先看下静态数据的特征数据。Shapefile的特征数据存放在*.dbf文件里面。你可以选择使用你常用的工具打开dbf文件。我个人一般使用的是`shapefile viewer`来查看。参考[这里获取程序及使用说明](https://github.com/ginkgoch/node-shapefile-viewer)。
 
-![china-attributes.png](/post-imgs/china-attributes.png)
+![china-attributes.png](/post-imgs/20200201/china-attributes.png)
 
 `NL_NAME_1`就是我们需要的省份名字，然后我们来看看动态数据的一个片段。
 
@@ -274,7 +274,7 @@ provinceLabelStyle.location = 'interior';
 provinceLayer.styles.push(provinceLabelStyle);
 ```
 
-![tutorial-01-china-confirmed.png](/post-imgs/tutorial-01-china-confirmed.png)
+![tutorial-01-china-confirmed.png](/post-imgs/20200201/tutorial-01-china-confirmed.png)
 
 是不是很有趣？我们现在可以随意替换调色板，让她变成蓝色系的。替换这一句即可。
 ```javascript
@@ -282,7 +282,7 @@ provinceLayer.styles.push(provinceLabelStyle);
 let activePallette = ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c'];
 ```
 
-![tutorial-01-final.png](/post-imgs/tutorial-01-final.png)
+![tutorial-01-final.png](/post-imgs/20200201/tutorial-01-final.png)
 
 ## 写在最后
 最终的代码可以在这里下载：https://github.com/ginkgoch/nCoV-map/tree/develop/tutorials

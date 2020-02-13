@@ -48,13 +48,13 @@ Each js file is a standalone demo. Execute it with `node [replace with js file n
 
 [render-simple-map.js](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-simple-map.js) represents how to load a shapefile and render into an image.
 
-![render-simple-map](https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/quick-started/render-simple-map.png)
+![render-simple-map](/post-imgs/20191230/render-simple-map.png)
 
 #### Render a colorful map
 
 [render-colorful-map.js](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-colorful-map.js) represents how to load a shapefile, then extract its property table and find out the distinct field values. When we got the distinct values, it automatically generate a `ValueStyle` to set an exclusive `FillStyle` for each values. 
 
-![render-colorful-map](https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/quick-started/render-colorful-map.png)
+![render-colorful-map](/post-imgs/20191230/render-colorful-map.png)
 
 ### Tutorial Begins
 
@@ -66,7 +66,7 @@ From this section, I will introduce the very basic demos through geometry, spati
 
 [create-geoms.js](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/create-geom.js) represents how to create point, polygon and line geometries; then set a specific style base on various geometry type and render them into an image.
 
-![create-geoms](https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/create-geoms.png)
+![create-geoms](/post-imgs/20191230/create-geoms.png)
 
 #### Buffer geometry by distance
 
@@ -74,11 +74,11 @@ From this section, I will introduce the very basic demos through geometry, spati
 
 * Buffers with `4` degrees
 
-    ![spatial-buffer](https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/spatial-buffer.png)
+    ![spatial-buffer](/post-imgs/20191230/spatial-buffer.png)
 
 * Buffers with `20` degrees
 
-    ![spatial-buffer](https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/geometries/spatial-buffer-1.png)
+    ![spatial-buffer](/post-imgs/20191230/spatial-buffer-1.png)
 
 #### Other spatial operations
 We provides other [built-in spatial operations](https://ginkgoch.com/node-geom/classes/spatialops.html), the other demos are in WIP...
@@ -107,7 +107,7 @@ In folder `data/Africa`, we include an Africa shapefile. Here attaches the `top 
 
 > I have a cross platform (can run in macOS, Linux and Win so far) GUI application [Ginkgoch Shapefile Viewer](https://github.com/ginkgoch/node-shapefile-viewer/releases) that allows to load shapefile, and render on top of a shapefile. Then you can visually tell what the shapefile looks like and the table data it includes.
 >
-> ![Shapefile Viewer](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview.png)
+> ![Shapefile Viewer](/post-imgs/20191230/overview.png)
 >
 > If GUI is too heavy to you, here is also a [command line tool](https://github.com/ginkgoch/node-shapefile-cli) you could look into.
 
@@ -115,19 +115,19 @@ In folder `data/Africa`, we include an Africa shapefile. Here attaches the `top 
 
 [use-value-style.js](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/use-value-style.js) represents how to set an exclusive fill colors based on field `CODE`.
 
-![use-value-style](https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/use-value-style.png)
+![use-value-style](/post-imgs/20191230/use-value-style.png)
 
 ##### Filter and render areas based on some specific values
 
 [render-filter-values.js](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/render-filter-values.js) represents how to filter and render areas with field values `MAL`,  `ZAI` and `SUD` only.
 
-![render-filter-values](https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/render-filter-values.png)
+![render-filter-values](/post-imgs/20191230/render-filter-values.png)
 
 #### Use Text Style
 
 Labels are pretty important for styling. We also support it. Check out [use-text-style.js](styles/use-text-style) for how to use `TextStyle` to put text on the map. This style automatically ignore the overlapping labels. If some label for small area not drawn, try to zoom deeper and you could see it when there is enough space for this label and no overlapping labels around it.
 
-![use-text-style](https://github.com/ginkgoch/map-quick-started-demos/raw/develop/core/styles/use-text-style.png)
+![use-text-style](/post-imgs/20191230/use-text-style.png)
 
 ### Layers and Sources
 

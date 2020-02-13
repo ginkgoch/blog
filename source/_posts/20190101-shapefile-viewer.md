@@ -4,18 +4,18 @@ date: 2019-01-01
 tag: [ node, node-io, shapefile ]
 ---
 
-![Shapefile viewer on macOS prview](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview.png)
+![Shapefile viewer on macOS preview](/post-imgs/20190101/overview.png)
 
 Are you looking for a easy to use `shapefile viewer on macOS`? `Ginkgoch` provides a utility to view shapefile's geometries and properties for free.
 <!-- more --> 
 
 * For Mac/Windows/Linux executable, download from the [release page](https://github.com/ginkgoch/node-shapefile-viewer/releases).
 
-![Shapefile viewer on macOS prview](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview.png)
+![Shapefile viewer on macOS preview](/post-imgs/20190101/overview.png)
 
-![Shapefile viewer on Windows prview](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview-win.png)
+![Shapefile viewer on Windows preview](/post-imgs/20190101/overview-win.png)
 
-![Shapefile viewer on Linux prview](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview-linux.png)
+![Shapefile viewer on Linux preview](/post-imgs/20190101/overview-linux.png)
 
 ## Features
 1. Load shapefile
@@ -30,7 +30,7 @@ Are you looking for a easy to use `shapefile viewer on macOS`? `Ginkgoch` provid
 1. macOS compatible
 
 ## Overview
-![Overview-workspace](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview-structure.png)
+![Overview-workspace](/post-imgs/20190101/overview-structure.png)
 
 Here introduces the workspaces of the UI. There are generally 5 sections.
 
@@ -44,12 +44,12 @@ Here introduces the workspaces of the UI. There are generally 5 sections.
 ### Open a shapefile
 There are two ways to open a specifid shapefile. There are on the menu on the very top and the open button on the toolbar. Select a shapefile from the popup dialog.
 
-![Open a shapefile](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/open.png)
+![Open a shapefile](/post-imgs/20190101/open.png)
 
 ### Shapefile loaded
 After the shapefile is loaded, a map visualizes on the `Map` and its properties displays on the `Properties` area.
 
-![Point cluster](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/point-cluster.png)
+![Point cluster](/post-imgs/20190101/point-cluster.png)
 
 ### Identify features
 There are two entires to identify a feature and make it highlighted.

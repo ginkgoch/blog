@@ -20,7 +20,7 @@ shapefile-cli -h
 * 更新了底层库，使用最新的`ginkgoch-map`版本，对于性能和准确度都有很大提升。
 * 新增投影转换，生成一个新的shapefile。
 * 新增服务模式，启动后脱离终端窗口，通过浏览器查看shapefile的基础信息。 
-    ![shapefile-cli-serve](/post-imgs/shapefile-cli-serve.png)
+    ![shapefile-cli-serve](/post-imgs/20200207/shapefile-cli-serve.png)
 * 新增创建索引文件功能，主要是为配合`ginkgoch-map`上层应用开发提高渲染和查询性能。
 * 修改了一些小的bug。
 

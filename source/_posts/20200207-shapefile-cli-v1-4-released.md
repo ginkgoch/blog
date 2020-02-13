@@ -20,7 +20,7 @@ shapefile-cli -h
 * Add a new feature to re-project a shapefile to a new shapefile with a specified CRS.
 * Add `serve` command to launch a server to support browse Shapefile information on browser.
 
-    ![shapefile-cli-serve](/post-imgs/shapefile-cli-serve.png)
+    ![shapefile-cli-serve](/post-imgs/20200207/shapefile-cli-serve.png)
 * Add `build-index` command to build spatial index file for a corresponding shapefile. The index files provide better query performance for upper-level application that is build around `ginkgoch-map`.
 * Some minor bugs fix.
 
