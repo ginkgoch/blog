@@ -3,11 +3,10 @@ title: Buffer Reader for Node.JS is Open Source
 date: 2018-07-23
 tag: [ node, node-io ]
 ---
-
-![buffer in node.js](/post-imgs/20180723/buffer-in-node.jpeg)
-
 In Node.js, when we want to read continuous number or string from a [Buffer](https://cn.nodejs.org/api/buffer.html) instance, we have to maintain a position where we are reading at. To make it easy, here is a library to help to read [Buffer](https://cn.nodejs.org/api/buffer.html) instance easier.
 <!-- more --> 
+
+![buffer in node.js](/post-imgs/20180723/buffer-in-node.jpeg)
 
 ## Install
 ```terminal

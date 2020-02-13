@@ -114,10 +114,10 @@
                 </li>
             </ul>
             <div class="post-content">
-                <p><img src="/post-imgs/20180728/stream-in-node.jpeg" alt="readable stream in node.js"></p>
-<p>When you use a new programming language, it is impossible to avoid to read or write a file. Node.js provides a serial of io APIs to help you to do such things.</p>
+                <p>When you use a new programming language, it is impossible to avoid to read or write a file. Node.js provides a serial of io APIs to help you to do such things.</p>
 <a id="more"></a> 
 
+<p><img src="/post-imgs/20180728/stream-in-node.jpeg" alt="readable stream in node.js"></p>
 <p>The fact is that, the API is hard to use, for example:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> readStream = fs.createReadStream(<span class="string">'myfile.txt'</span>);</span><br><span class="line">readStream.on(<span class="string">'data'</span>, chunk =&gt; <span class="built_in">console</span>.log(chunk));</span><br></pre></td></tr></table></figure>
 
