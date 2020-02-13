@@ -3,10 +3,10 @@ title: Stream Reader for Node.JS is Open Source
 date: 2018-07-28
 tag: [ node, node-io ]
 ---
-
 ![readable stream in node.js](/post-imgs/stream-in-node.jpeg)
 
 When you use a new programming language, it is impossible to avoid to read or write a file. Node.js provides a serial of io APIs to help you to do such things.
+<!-- more --> 
 
 The fact is that, the API is hard to use, for example:
 ```js

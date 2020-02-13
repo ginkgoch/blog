@@ -7,6 +7,7 @@ tag: [ map, shapefile, gis tools ]
 ![shapefile cli](/post-imgs/shapefile-cli.gif)
 
 Sometimes, when we want to peek a shapefile, see what's the shape type it is, how many records it has, or find out what properties it contains. There are some free tools to visualize it. But most of the tools are too heavy or maybe not possible to run on macOS or Linux. Here is a command line tool to help to inspect a specified shapefile. It provides function to inspect a specified shapefile's header, fields, records etc. You could see, it is totally free and open-source. Enjoy it!
+<!-- more --> 
 
 ## Install
 ```terminal

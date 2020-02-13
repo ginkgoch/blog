@@ -3,8 +3,8 @@ title: Godash - Lodash for Go Open Source
 date: 2019-11-01
 tag: [ golang, go, lodash, slice, array ]
 ---
-
 [This project](github.com/ginkgoch/godash) is lodash in golang version. A modern Golang utility library delivering modularity, performance & extras.
+<!-- more --> 
 
 ## Install & Import
 ```bash

@@ -3,10 +3,10 @@ title: Build a XYZ Map Server with MAP SDK
 date: 2020-01-06
 tag: [ javascript, gis, map, service, xyz service, tiling, zoom level ]
 ---
+In the previous page: [Quick Started Demos for Map Core](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/README.md), I introduced the basic library of `Ginkgoch Map`. It allows developers to draw a map with shapefiles or features with thematic styles, then store it as an image on disk. It is a pretty simple and pure demo which could only guide to build some console utilities. But `Ginkgoch` is far more powerful than that. 
+<!-- more --> 
 
-In the previous page: [Quick Started Demos for Map Core](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/README.md), I introduced the basic library of `Ginkgoch Map`. It allows developers to draw a map with shapefiles or features with thematic styles, then store it as an image on disk. It is a pretty simple and pure demo which could only guide to build some console utilities.
-
-But `Ginkgoch` is far more powerful than that. I used to announce that `Ginkgoch Map` library allows to build cross platform server, desktop and mobile applications with only JavaScript. So today, I will try to challenge to build an interactive map. 
+I used to announce that `Ginkgoch Map` library allows to build cross platform server, desktop and mobile applications with only JavaScript. So today, I will try to challenge to build an interactive map. 
 
 - [Scenario](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#scenario)
 - [Prerequisite](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/services/README.md#prerequisite)

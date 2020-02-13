@@ -7,6 +7,7 @@ tag: [ node, node-io, shapefile ]
 ![Shapefile viewer on macOS prview](https://github.com/ginkgoch/node-shapefile-viewer/raw/develop/screenshots/overview.png)
 
 Are you looking for a easy to use `shapefile viewer on macOS`? `Ginkgoch` provides a utility to view shapefile's geometries and properties for free.
+<!-- more --> 
 
 * For Mac/Windows/Linux executable, download from the [release page](https://github.com/ginkgoch/node-shapefile-viewer/releases).
 

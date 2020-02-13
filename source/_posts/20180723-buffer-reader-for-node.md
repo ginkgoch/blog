@@ -7,6 +7,7 @@ tag: [ node, node-io ]
 ![buffer in node.js](/post-imgs/buffer-in-node.jpeg)
 
 In Node.js, when we want to read continuous number or string from a [Buffer](https://cn.nodejs.org/api/buffer.html) instance, we have to maintain a position where we are reading at. To make it easy, here is a library to help to read [Buffer](https://cn.nodejs.org/api/buffer.html) instance easier.
+<!-- more --> 
 
 ## Install
 ```terminal
