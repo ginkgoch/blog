@@ -1,5 +1,5 @@
 ---
-title: Node MAP SDK v1.12 Released with Many Feature Demos
+title: Node MAP SDK v1.12 Released with Feature Demos
 date: 2020-02-25
 tag: [ map, shapefile, gis tools ]
 ---
