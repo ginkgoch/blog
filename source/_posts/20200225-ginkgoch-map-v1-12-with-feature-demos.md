@@ -22,7 +22,9 @@ Learning feature with demos will be a pretty easy way to get started. Before lea
 
 This feature demo application is built with `electron` that support to run on `macOS`, `Windows` and `Linux`.
 
-![feature-demos](/post-imgs/20200225/feature-demos.png)
+![feature-demos](/post-imgs/20200225/overview.png)
+
+![feature-demos-detail](/post-imgs/20200225/screenshot-1.png)
 
 Go to the [release page](https://github.com/ginkgoch/map-desktop-demo/releases) for the latest update. OR download directly by the links below.
 
@@ -31,6 +33,8 @@ Go to the [release page](https://github.com/ginkgoch/map-desktop-demo/releases) 
 * Feature Demos for Windows (I don't have a Windows machine, if you need one, please goto the [repo and follow my guide](https://github.com/ginkgoch/map-desktop-demo) to build one)
 
 Visit more feature demo source code on https://github.com/ginkgoch/map-desktop-demo
+
+
 
 Happy Mapping 😎
 
