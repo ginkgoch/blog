@@ -100,91 +100,52 @@
     </nav>
 </header>
                 <main class="main">
-                    
-<section class="posts">
+                    <article class="post">
     
-        <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2018/08/08/20180808-shapefile-reader-for-node/">
-                            Shapefile Reader for Node.js is Open Source
-                        </a>
-                    </h1>
+            <h2 class="post-title">
+                Node MAP SDK v1.12 Released
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2020-02-25
+                </li>
+                <li>
+                    Ginkgoch
+                </li>
+            </ul>
+            <div class="post-content">
+                <p>Many feedback indicate that the <a href="https://github.com/ginkgoch/map-quick-started-demos" target="_blank" rel="noopener">getting started sample</a> is too simple. Yes, I agree. Here comes 20+ feature demos you could refer to. Also released with new MAP SDK version v1.12.0 with many API improvements as well as some new functions.</p>
+<a id="more"></a> 
 
-                    <ul class="post-date">
-                        <li>
-                            August 8, 2018
-                        </li>
-                        <li>
-                            Ginkgoch
-                        </li>
-                    </ul>
-                    
-                        <div class="post-cover">
-                            <img src="/post-imgs/20180808/shapefile-for-node.png">
-                        </div>
-                    
-                    <div class="post-content ">
-                        <p><code>ginkgoch-shapefile-reader</code> is a Node.js library to help to read shapefiles from your disk.</p>
-                            <a href="/2018/08/08/20180808-shapefile-reader-for-node/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-        <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2018/07/28/20180728-stream-reader-for-node/">
-                            Stream Reader for Node.JS is Open Source
-                        </a>
-                    </h1>
+<h2 id="v1-12-0-Change-Logs"><a href="#v1-12-0-Change-Logs" class="headerlink" title="v1.12.0 Change Logs"></a>v1.12.0 Change Logs</h2><ul>
+<li>Add <code>ViewportUtils.getInitViewport</code> function to get a proper lng, lat, zoom from envelope</li>
+<li>Allow to build geometries with number arrays for easier number input. e.g. <code>new LineString([{x:0, y:0}, {x:10, y:10}])</code> becomes <code>LineString.fromNumbers([0, 0, 10, 10])</code></li>
+<li>Implement query function on FeatureSource which allows to query features based on spatial relationship: <code>intersect</code>, <code>disjoint</code>, <code>within</code>, <code>overlap</code> and <code>touch</code></li>
+<li>Add declare file (*.d.ts) for native register for better typescript support</li>
+<li>Fix a bug of a returning type is bind to another lib’s specific version, which makes typescript upstream project compile filed</li>
+<li>Add a strategy to auto break down values by its index position. Previously, it breaks down by value, when the maximum value is far away from the second large value, the effect is not good.</li>
+<li>Allow to create new delimited file with specified features.</li>
+</ul>
+<p>More history change logs, please refer to <a href="https://github.com/ginkgoch/node-map/blob/develop/RELEASE.md" target="_blank" rel="noopener">this page</a> for detail.</p>
+<h2 id="Feature-Demos"><a href="#Feature-Demos" class="headerlink" title="Feature Demos"></a>Feature Demos</h2><p>Learning feature with demos will be a pretty easy way to get started. Before learning from source code, a better approach is to take a look at what it can be done with an executable application.</p>
+<p>This feature demo application is built with <code>electron</code> that support to run on <code>macOS</code>, <code>Windows</code> and <code>Linux</code>.</p>
+<p><img src="/post-imgs/20200225/feature-demos.png" alt="feature-demos"></p>
+<p>Go to the <a href="https://github.com/ginkgoch/map-desktop-demo/releases" target="_blank" rel="noopener">release page</a> for the latest update. OR download directly by the links below.</p>
+<ul>
+<li><a href="https://ginkgoch.s3.us-east-2.amazonaws.com/desktop-demo/ginkgoch-feature-demos-for-desktop-1.0.0-mac.zip" target="_blank" rel="noopener">Feature Demos for macOS</a></li>
+<li><a href="https://ginkgoch.s3.us-east-2.amazonaws.com/desktop-demo/ginkgoch-feature-demos-for-desktop-1.0.0.AppImage" target="_blank" rel="noopener">Feature Demos for Linux</a></li>
+<li>Feature Demos for Windows (I don’t have a Windows machine, if you need one, please goto the <a href="https://github.com/ginkgoch/map-desktop-demo" target="_blank" rel="noopener">repo and follow my guide</a> to build one)</li>
+</ul>
+<p>Visit more feature demo source code on <a href="https://github.com/ginkgoch/map-desktop-demo" target="_blank" rel="noopener">https://github.com/ginkgoch/map-desktop-demo</a></p>
+<p>Happy Mapping 😎</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://ginkgoch.com" target="_blank" rel="noopener">Ginkgoch Home Page</a></li>
+<li><a href="https://github.com/ginkgoch/node-map" target="_blank" rel="noopener">View on Github</a></li>
+<li><a href="https://github.com/ginkgoch/node-map/issues" target="_blank" rel="noopener">Report an Issue</a> or <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">Contact Author</a></li>
+</ul>
 
-                    <ul class="post-date">
-                        <li>
-                            July 28, 2018
-                        </li>
-                        <li>
-                            Ginkgoch
-                        </li>
-                    </ul>
-                    
-                        <div class="post-cover">
-                            <img src="/post-imgs/20180728/stream-in-node.jpeg">
-                        </div>
-                    
-                    <div class="post-content ">
-                        <p>When you use a new programming language, it is impossible to avoid to read or write a file. Node.js provides a serial of io APIs to help you to do such things.</p>
-                            <a href="/2018/07/28/20180728-stream-reader-for-node/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-        <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2018/07/23/20180723-buffer-reader-for-node/">
-                            Buffer Reader for Node.JS is Open Source
-                        </a>
-                    </h1>
-
-                    <ul class="post-date">
-                        <li>
-                            July 23, 2018
-                        </li>
-                        <li>
-                            Ginkgoch
-                        </li>
-                    </ul>
-                    
-                        <div class="post-cover">
-                            <img src="/post-imgs/20180723/buffer-in-node.jpeg">
-                        </div>
-                    
-                    <div class="post-content ">
-                        <p>In Node.js, when we want to read continuous number or string from a <a href="https://cn.nodejs.org/api/buffer.html" target="_blank" rel="noopener">Buffer</a> instance, we have to maintain a position where we are reading at. To make it easy, here is a library to help to read <a href="https://cn.nodejs.org/api/buffer.html" target="_blank" rel="noopener">Buffer</a> instance easier.</p>
-                            <a href="/2018/07/23/20180723-buffer-reader-for-node/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-</section>
+            </div>
+</article>
 
                 </main>
                 <aside class="aside">
