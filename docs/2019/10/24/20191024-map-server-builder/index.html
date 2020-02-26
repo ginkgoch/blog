@@ -3,9 +3,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta name="keywords" content="node.js, open source, library, shapefile, command line tool, release, electron map, map, gis software, map server, build map, docker, golang, lodash, map tutorial, map sdk, tutorial">
+    <meta name="keywords" content="map library, cross platform, multiple platforms, mapping software, spatial analysis, open source">
     <title>
-        Mapping for Fun - Ginkgoch Blog
+        Discuss New Events of Cross Platform Map Library | Ginkgoch
     </title>
     <!-- favicon -->
     
@@ -59,7 +59,7 @@
     <h1 class="title">
         <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
         <a href="/" class="logo">
-            Ginkgoch
+            Discuss New Events of Cross Platform Map Library | Ginkgoch
         </a>
     </h1>
     <h2 class="desc">
@@ -103,7 +103,7 @@
                     <article class="post">
     
             <h2 class="post-title">
-                Map Builder Platform Open Source
+                Open Source Map Builder Platform
             </h2>
             <ul class="post-date">
                 <li>
@@ -114,7 +114,7 @@
                 </li>
             </ul>
             <div class="post-content">
-                <p><a href="https://github.com/ginkgoch/node-map-server" target="_blank" rel="noopener">This project</a> is a map server template that could help you to build robust and customize map service quickly with Ginkgoch map library (<a href="https://github.com/ginkgoch/node-map/blob/develop/README.md" target="_blank" rel="noopener">Ginkgoch Map for NodeJS</a> is a map library written by Node.js with full functional features on GIS application development).</p>
+                <p><a href="https://github.com/ginkgoch/node-map-server" target="_blank" rel="noopener">This project</a> is a map server template that could help you to build robust and customize map service quickly with <a href="https://github.com/ginkgoch/node-map/blob/develop/README.md" target="_blank" rel="noopener">Ginkgoch Map Library</a> which is written by Node.js with full functional features for crafting mapping software.</p>
 <a id="more"></a> 
 
 <p><img src="/post-imgs/20191024/map-overview.png" alt="Demo Overview"></p>
@@ -148,22 +148,22 @@
 
 <h4 id="Launch-server-with-docker-and-mounte-a-physical-data-path"><a href="#Launch-server-with-docker-and-mounte-a-physical-data-path" class="headerlink" title="Launch server with docker and mounte a physical data path"></a>Launch server with <code>docker</code> and mounte a physical data path</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name map-server -p 3000:3000 -v <span class="string">"/Users/ginkgoch/Downloads/Africa_SHP/:/root/map-server/data/"</span> -d ginkgoch/map-server</span><br></pre></td></tr></table></figure>
 
-<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="What-is-the-difference-to-the-other-GIS-components"><a href="#What-is-the-difference-to-the-other-GIS-components" class="headerlink" title="What is the difference to the other GIS components?"></a>What is the difference to the other GIS components?</h3><p>The entire project including UI, server and its dependencies libraries are all written by NodeJS. If you already knew JavaScript, I hope you this could bring you a brand new experience to build a full functional GIS application with one programming language. </p>
-<h3 id="Why-do-I-need-a-customized-thematic-map"><a href="#Why-do-I-need-a-customized-thematic-map" class="headerlink" title="Why do I need a customized thematic map?"></a>Why do I need a customized thematic map?</h3><p>When you ask this question, I assume that you already have the experience to build map apps on browser with <code>OpenLayers</code>, <code>Google Map</code> or <code>Leaflet</code> etc. This might satisfy your requirement already. But when you have a GIS data (e.g. SHP file, Postgre or even CSV) that contains more precise vectors, or more properties on the records, or analyze on a region (e.g. find some records with some special condition in a random drawn area), it might be a headache to implement with the existing client based libraries. Because the 3rd party client libraries only provides restricted predefined query functions, styles etc. functions. In this case, setup a custom map server is a good choice and become a solution to extend your map application more. With your own server, you can also interact with the 3rd party client map libraries to provide better UX for applications.</p>
-<h3 id="Why-NodeJS"><a href="#Why-NodeJS" class="headerlink" title="Why NodeJS?"></a>Why NodeJS?</h3><h4 id="One-programming-langue-for-frontend-and-backend"><a href="#One-programming-langue-for-frontend-and-backend" class="headerlink" title="One programming langue for frontend and backend"></a>One programming langue for frontend and backend</h4><p>JavaScript is one of the most popular programming language in the world currently. It is also the required skills for UI developers. On the other hand, many small teams, groups, organizations or kickstart companies requires full stack developers, so JavaScript will be the most important skill in this part.</p>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="What-is-the-difference-to-the-other-map-library"><a href="#What-is-the-difference-to-the-other-map-library" class="headerlink" title="What is the difference to the other map library?"></a>What is the difference to the other map library?</h3><p>The entire project including UI, server and its dependencies libraries are all written by Node.js. If you already knew JavaScript, I hope you this could bring you a brand new experience to build a full functional GIS application with one programming language. </p>
+<h3 id="Why-do-I-need-a-customized-thematic-map"><a href="#Why-do-I-need-a-customized-thematic-map" class="headerlink" title="Why do I need a customized thematic map?"></a>Why do I need a customized thematic map?</h3><p>When you ask this question, I assume that you already have the experience to build mapping software on browser with <code>OpenLayers</code>, <code>Google Map</code> or <code>Leaflet</code> etc. This might satisfy your requirement already. But when you have your own GIS data locally (e.g. SHP file, Postgre or even CSV) that contains more precise vectors, or more properties on the records, or want to do spatial analysis on a region (e.g. find some records with some special condition in a random drawn area), it might be a headache to implement with pure client map library. Because the 3rd party client map library only provides restricted predefined query functions, styles etc. functions. In this case, setup a custom map server is a good choice and become a solution to extend the functionalities for your existing mapping software. With your own server, you can still work with the 3rd party client map library for better UX.</p>
+<h3 id="Why-Node-js"><a href="#Why-Node-js" class="headerlink" title="Why Node.js?"></a>Why Node.js?</h3><h4 id="One-programming-langue-for-frontend-and-backend"><a href="#One-programming-langue-for-frontend-and-backend" class="headerlink" title="One programming langue for frontend and backend"></a>One programming langue for frontend and backend</h4><p>JavaScript is one of the most popular programming language in the world currently. It is also the required skills for UI developers. On the other hand, many small teams, groups, organizations or kickstart companies requires full stack developers, so JavaScript will be the most important skill in this part.</p>
 <p>In the GIS region, we know there are many famous client MAP libraries like <code>OpenLayers</code>, <code>Leaflet</code> or <code>Google</code> etc. It is pretty easy to build a browser based map view for your websites or web-apps. But if you want to setup your own map server cluster, you might need to learn to use <code>C#</code>, <code>JAVA</code>, cloud etc. This is not too many complete GIS solution with JavaScript.</p>
-<p>When I play around with NodeJS which allows me to build more interesting application on server side with JavaScript, so this project launches.</p>
-<h4 id="Thread-safe"><a href="#Thread-safe" class="headerlink" title="Thread safe"></a>Thread safe</h4><p>It is well-known that NodeJS runs in <code>single thread</code> and <code>event-loop</code>. I used to use many other GIS component with <code>C#</code> and <code>JAVA</code>, it has a bad experience to build high performance service. We need to consider the mutex lock on resource reading/appending in multi-thread.</p>
+<p>When I play with Node.js which allows me to build interesting mapping software on server side with JavaScript, so this project launches.</p>
+<h4 id="Thread-Safe"><a href="#Thread-Safe" class="headerlink" title="Thread Safe"></a>Thread Safe</h4><p>It is well-known that NodeJS runs in <code>single thread</code> and <code>event-loop</code>. I used to use many other GIS component with <code>C#</code> and <code>JAVA</code>, it has a bad experience to build high performance service. We need to consider the mutex lock on resource reading/appending in multi-thread.</p>
 <p>With NodeJS’ single thread mode, you don’t need to consider the thread safe issue; instead, we can focus more on the concrete business of your application.</p>
-<h4 id="I’m-worry-about-the-performance-building-in-NodeJS"><a href="#I’m-worry-about-the-performance-building-in-NodeJS" class="headerlink" title="I’m worry about the performance building in NodeJS"></a>I’m worry about the performance building in NodeJS</h4><p>Technically, NodeJS runs with V8 engine with single thread and I/O non-blocking mode, it seems has worse performance than the other techs, such as JAVA. But in the real world with high CPU performance, the gap becomes less and less. </p>
+<h4 id="I’m-worry-about-the-performance-building-in-Node-js"><a href="#I’m-worry-about-the-performance-building-in-Node-js" class="headerlink" title="I’m worry about the performance building in Node.js"></a>I’m worry about the performance building in Node.js</h4><p>Technically, NodeJS runs with V8 engine with single thread and I/O non-blocking mode, it seems has worse performance than the other techs, such as JAVA. But in the real world with high CPU performance, the gap becomes less and less. </p>
 <p>It really depends on the scenario of your application. For example:</p>
 <ol>
 <li>For CPU-intensive calculating, like huge amount number calculation, zero I/O processing, definitely, <code>JAVA</code> or <code>C#</code> will be a best choice.</li>
 <li>For IO-intensive process, like reading/writing files, NodeJS will be 3.4X better performance. (<a href="https://github.com/johnrjenson/JavaVsNode" target="_blank" rel="noopener">https://github.com/johnrjenson/JavaVsNode</a>)</li>
 </ol>
 <p>I don’t think the application is a pure I/O or CPU intensive application, but for the balanced workload application, I would say the performance will be about the same. </p>
-<p>One more thing I think the worsest thing for node is the memory restriction (e.g. 1G in 64-bit system). We need to either reduce the memory usage or manually expand the memory.</p>
-<h4 id="Mature-JavaScript-Echo-System"><a href="#Mature-JavaScript-Echo-System" class="headerlink" title="Mature JavaScript Echo-System"></a>Mature JavaScript Echo-System</h4><p>JavaScript has a great echo-system for full-stack technology. It is allow to build cross-platform website, service, desktop or even mobile applications. <code>Ginkgoch</code> will also provide those solutions on this cross-platform, various categories of GIS applications. (PS. it is now supported website, webserivce, desktop; and mobile is in my backlog).</p>
+<p>One more thing I think the worst thing for node.js is the memory restriction (e.g. 1G in 64-bit system). We need to either reduce the memory usage or manually expand the memory.</p>
+<h4 id="Mature-JavaScript-Echo-System"><a href="#Mature-JavaScript-Echo-System" class="headerlink" title="Mature JavaScript Echo-System"></a>Mature JavaScript Echo-System</h4><p>JavaScript has a great echo-system for full-stack technology. It allows to build cross platform website, service, desktop or even mobile applications. <code>Ginkgoch</code> provides a Node.js map library for building cross platform mapping software. (PS. it is now supported website, web services, desktop; and mobile is in my backlog).</p>
 <h2 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h2><p>Contact <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">ginkgoch@outlook.com</a> or <a href="https://github.com/ginkgoch/node-map-server/issues" target="_blank" rel="noopener">submit an issue</a>. Happy mapping 😎</p>
 
             </div>

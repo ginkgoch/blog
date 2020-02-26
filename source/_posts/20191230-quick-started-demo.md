@@ -1,9 +1,9 @@
 ---
-title: Quick Started Demos for Ginkgoch Map SDK
+title: Quick Started Demos for Ginkgoch Map Library
 date: 2019-12-30
 tag: [ node.js, map tutorial, map, build map ]
 ---
-This page represents several simple demos for [pure map core library](https://github.com/ginkgoch/node-map). In this page, I don't refer any other web, desktop or mobile frameworks to build rich UX application; but use few lines of code to show the power of its GIS functions.
+This page represents several simple demos for core functions of [Ginkgoch Map Library](https://github.com/ginkgoch/node-map). In this page, I won't introduce any other web, desktop or mobile frameworks to build rich UX application; but only use few lines of code to show the feature of its mapping capabilities. Simple features are basis of building complex mapping software, isn't it?
 <!-- more --> 
 
 - [Prerequisite](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/README.md#prerequisite)
@@ -58,11 +58,11 @@ Each js file is a standalone demo. Execute it with `node [replace with js file n
 
 ### Tutorial Begins
 
-From this section, I will introduce the very basic demos through geometry, spatial analyze, style renderer, source and layers. I try to use pretty simple demo for example with brief code to show you how to implement a small part in a GIS app. When you understand the very little functions, you could build up a complex and robust GIS app by putting them together.
+From this section, I will introduce the very basic demos through geometry, spatial analyze, style renderer, source and layers. I try to use pretty simple demo for example with brief code to show you how to implement a small part in a GIS app. When you understand the very little functions, you could build up a complex and robust cross platform mapping software  by putting them together.
 
 ### Use Geometries
 
-#### Create geometry and render with different styles
+#### Create geometry and data visualization
 
 [create-geoms.js](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/create-geom.js) represents how to create point, polygon and line geometries; then set a specific style base on various geometry type and render them into an image.
 
@@ -80,10 +80,10 @@ From this section, I will introduce the very basic demos through geometry, spati
 
     ![spatial-buffer](/post-imgs/20191230/spatial-buffer-1.png)
 
-#### Other spatial operations
-We provides other [built-in spatial operations](https://ginkgoch.com/node-geom/classes/spatialops.html), the other demos are in WIP...
+#### Other spatial analysis
+We provides more [built-in spatial analysis](https://ginkgoch.com/node-geom/classes/spatialops.html) functionalities, the other demos are in WIP...
 
-### Use Styles
+### Use Styles for data visualization
 
 #### Use simple styles
 
@@ -105,11 +105,11 @@ In folder `data/Africa`, we include an Africa shapefile. Here attaches the `top 
 | 2    | ANG  | Angola  |
 | 3    | ANG  | Angola  |
 
-> I have a cross platform (can run in macOS, Linux and Win so far) GUI application [Ginkgoch Shapefile Viewer](https://github.com/ginkgoch/node-shapefile-viewer/releases) that allows to load shapefile, and render on top of a shapefile. Then you can visually tell what the shapefile looks like and the table data it includes.
+> I have a cross platform (can run in macOS, Linux and Win so far) mapping application for desktop [Shapefile Viewer](https://github.com/ginkgoch/node-shapefile-viewer/releases) that allows to load shapefile, and render on based on a shapefile. Then you can visually tell what the shapefile looks like and the features it includes.
 >
 > ![Shapefile Viewer](/post-imgs/20191230/overview.png)
 >
-> If GUI is too heavy to you, here is also a [command line tool](https://github.com/ginkgoch/node-shapefile-cli) you could look into.
+> If GUI is too heavy to you, here is also a [command line tool](https://github.com/ginkgoch/node-shapefile-cli) to use.
 
 ##### Render areas based on values
 
@@ -125,7 +125,7 @@ In folder `data/Africa`, we include an Africa shapefile. Here attaches the `top 
 
 #### Use Text Style
 
-Labels are pretty important for styling. We also support it. Check out [use-text-style.js](styles/use-text-style) for how to use `TextStyle` to put text on the map. This style automatically ignore the overlapping labels. If some label for small area not drawn, try to zoom deeper and you could see it when there is enough space for this label and no overlapping labels around it.
+Labels are pretty important for data visualization. We also support it. Check out [use-text-style.js](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/use-text-style) for how to use `TextStyle` to put text on a map. This style automatically ignore the overlapping labels. If some label for small area not drawn, try to zoom in deeper and you could see it when there is enough space for this label and no overlapping labels around it.
 
 ![use-text-style](/post-imgs/20191230/use-text-style.png)
 
@@ -138,6 +138,6 @@ As the samples represented previously, in the mean time, the `FeatureSource` and
 
 ## Summary
 
-In this page, I introduced some basic guide for `Ginkgoch` map core library. It is the very low level component of building a map application programmatically. I'm now planning to do some advanced guide to build RESTful APIs, or cross platform GUI applications. Hope you enjoy it. 
+In this page, I introduced some basic guide for `Ginkgoch map library`. It is a very low level SDK of building cross platform mapping software programmatically. I'm now planning to do some advanced guide to build RESTful APIs, and cross platform GUI applications. Hope you enjoy it. 
 
-Thanks for reading, happy mapping !!!
+Thanks for reading. Happy Mapping!!!

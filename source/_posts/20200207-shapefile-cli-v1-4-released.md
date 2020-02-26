@@ -3,7 +3,7 @@ title: Shapefile CLI v1.4 Released
 date: 2020-02-07
 tag: [ node.js, open source, command line tool, shapefile, release ]
 ---
-Today, I made a new release of my old project `node-shapefile-cli` with a set of new features for better experience; upgraded the core implementation for better performance and more precise vectors.
+Today, I made a new release of my old project `node-shapefile-cli` with a set of new features for better experience; upgraded the [Ginkgoch Map Library](https://ginkgoch.com) for better performance and more precise vectors.
 <!-- more --> 
 
 [中文请看这里](https://blog.csdn.net/Ginkgoch/article/details/104231918)
@@ -20,10 +20,10 @@ shapefile-cli -h
 ### Change Logs v1.4
 * Upgrade the core implementation, better performance and accurate result.
 * Add a new feature to re-project a shapefile to a new shapefile with a specified CRS.
-* Add `serve` command to launch a server to support browse Shapefile information on browser.
+* Add `serve` command to launch a server to browse Shapefile information on browser.
 
     ![shapefile-cli-serve](/post-imgs/20200207/shapefile-cli-serve.png)
-* Add `build-index` command to build spatial index file for a corresponding shapefile. The index files provide better query performance for upper-level application that is build around `ginkgoch-map`.
+* Add `build-index` command to build spatial index file for a corresponding shapefile. The index files provide better query performance for upper-level application that is build by [Ginkgoch Map Library](https://ginkgoch.com).
 * Some minor bugs fix.
 
 ### History Change Logs

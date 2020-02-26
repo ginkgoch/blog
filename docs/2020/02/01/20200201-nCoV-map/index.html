@@ -3,9 +3,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta name="keywords" content="node.js, open source, library, shapefile, command line tool, release, electron map, map, gis software, map server, build map, docker, golang, lodash, map tutorial, map sdk, tutorial">
+    <meta name="keywords" content="map library, cross platform, multiple platforms, mapping software, spatial analysis, open source">
     <title>
-        Mapping for Fun - Ginkgoch Blog
+        Discuss New Events of Cross Platform Map Library | Ginkgoch
     </title>
     <!-- favicon -->
     
@@ -59,7 +59,7 @@
     <h1 class="title">
         <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
         <a href="/" class="logo">
-            Ginkgoch
+            Discuss New Events of Cross Platform Map Library | Ginkgoch
         </a>
     </h1>
     <h2 class="desc">
@@ -114,7 +114,7 @@
                 </li>
             </ul>
             <div class="post-content">
-                <p>The beginning of 2020 is full of unfortunate news. The spread of new pneumonia - nCoV, Kobe’s gone … It hurts me all the time. In order not to disturb the country, I stayed at home for a few days in the new year. From time to time, pick up your phone and observe the spread of the disease. The following map is a typical GIS application that helps me to know the situation.</p>
+                <p>The beginning of 2020 is full of unfortunate news. The spread of new pneumonia - nCoV, Kobe’s gone … It hurts me all the time. In order not to disturb the country, I stayed at home for a few days in the new year. From time to time, pick up your phone and observe the spread of the disease. The following map is a typical mapping software that helps me to know the situation.</p>
 <a id="more"></a> 
 
 <p><a href="https://blog.csdn.net/Ginkgoch/article/details/104135828" target="_blank" rel="noopener">中文请看这里</a></p>
@@ -134,25 +134,25 @@
 <li><a href="#summary">Summary</a></li>
 </ul>
 <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p><img src="/post-imgs/20200201/infection-cover-status-demo.png" alt="infection-cover-status-demo"></p>
-<p>Whenever I see this static picture, I want to know a few more information that I don’t know.</p>
+<p>Whenever I see this static picture, I want to know a few more information that is not represented here.</p>
 <ol>
 <li>We can compare the range of confirmed patients in a province by color and legend. But we cannot recognize the specific number of patients in a province on this picture.</li>
 <li>Due to a static map, we cannot get city-level information. If the map can be dragged, zooming in and out, it will be much convenient.</li>
 <li>Every time I see red, I feel anxious. Can it be changed to other colors, I am more acceptable.</li>
 </ol>
-<p>Based on these two small functions, I am going to introduce how to make a map from 0, step by step. I am planning to do it in two phases.</p>
+<p>Based on these two small functions, I am going to introduce how to make a map software from 0 to 1, step by step. I am planning to do it in two phases.</p>
 <ol>
 <li>Generate a static picture with the most concise code first. Through this phase, let’s get to know the API of <code>Ginkgoch</code> map development.</li>
-<li>After we learned the <code>API</code> for<code>Ginkgoch</code> map development, we transformed this program into a map service, and let it work with the well-known map front-end library <code>Leaflet</code> to build an interactive map and so on.</li>
+<li>After we learned the <code>API</code> for <code>Ginkgoch Map Library</code>, we will transform this program into a map service, and let it work with a well-known map UI library <code>Leaflet</code> to build an interactive mapping software for web.</li>
 </ol>
-<p>In this article, I will kick-off with building a command-line tool to generate a static map image like I pasted above.</p>
+<p>In this article, I will kick-off by building a cross platform command line tool to generate a static map image like I pasted above.</p>
 <blockquote>
-<p><a href="https://ginkgoch.com" target="_blank" rel="noopener"><code>Ginkgoch</code> mapping development kit</a> is a GIS full stack development kit. You can develop map-related command line programs, map desktop programs, and map services with only one programming language - JavaScript.</p>
+<p><a href="https://ginkgoch.com" target="_blank" rel="noopener">Ginkgoch map library</a> is a GIS full stack development kit. You can develop map-related command line programs, map desktop programs, and map services with only one programming language - JavaScript.</p>
 </blockquote>
-<h2 id="Let’s-start-with-the-environment"><a href="#Let’s-start-with-the-environment" class="headerlink" title="Let’s start with the environment"></a>Let’s start with the environment</h2><p><strong>Previously developed map application software</strong>, you may need to master a lot of programming language to be competent for a complete project. For example, a typical GIS B/S application generally uses Java, C# or other back-end programming languages to develop the back-end, and then uses JavaScript + HTML to develop the front-end presentation.</p>
-<p>Today we gonna use <code>Ginkgoch</code> to develop, we no longer need to know other programming languages, instead JavaScript is the only required skill; even front-end developers can develop back-end map applications. For a minimalist development environment, we only need 2 tools.<a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a> (version 8 or above) <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">vscode</a>.</p>
+<h2 id="Let’s-start-with-the-environment"><a href="#Let’s-start-with-the-environment" class="headerlink" title="Let’s start with the environment"></a>Let’s start with the environment</h2><p><strong>In the old time, building a mapping software</strong> requires to master several programming language to be competent for a complete project. For example, a typical GIS B/S application is formed by a mapping service which uses Java, C# or other back-end programming languages, and JavaScript + HTML for developing front-end presentation.</p>
+<p>Today we gonna use <code>Ginkgoch Map Library</code> to develop, we no longer need to know other programming languages; instead, JavaScript is the only required skill; even frontend developers can develop cross platform mapping software. For a minimalist development environment, we only need 2 tools: <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a> (version 8 or above) and <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">vscode</a>.</p>
 <blockquote>
-<p>This article takes care of novices and writes a lot basic content. Please ignore the content that you already familiar with.</p>
+<p>This article takes care of novices and includes a lot basic technical content. Please ignore the content that you already familiar with.</p>
 </blockquote>
 <h2 id="Create-project-add-references"><a href="#Create-project-add-references" class="headerlink" title="Create project, add references"></a>Create project, add references</h2><p>Next, we create a project directory. Just use the following command. (I personally prefer to use the command line, because I usually use macOS for daily use of machines. So the following command lines are performed by macOS for verification).</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create work folder</span></span><br><span class="line"><span class="built_in">cd</span> [your workspace]</span><br><span class="line">md nCoV-map</span><br><span class="line"><span class="built_in">cd</span> nCoV-map</span><br><span class="line"></span><br><span class="line"><span class="comment"># create project and add references</span></span><br><span class="line">npm init -y</span><br><span class="line">npm i --save ginkgoch-map canvas lodash</span><br><span class="line"></span><br><span class="line"><span class="comment"># create a new js file for code entry</span></span><br><span class="line">touch tutorial-01.js</span><br></pre></td></tr></table></figure>
@@ -221,7 +221,7 @@
 
 <p><img src="/post-imgs/20200201/tutorial-01-final.png" alt="tutorial-01-final.png"></p>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>You could find all the code implementation at: <a href="https://github.com/ginkgoch/nCoV-map/tree/develop/tutorials" target="_blank" rel="noopener">https://github.com/ginkgoch/nCoV-map/tree/develop/tutorials</a></p>
-<p>Looks like a lot work to do, most of the code is business code, and style settings. It’s quite simple to understand. That’s it for today. When I have time later, I will write another article to migrate this code to a map service as well as an interactive map application for browser. Feel free to contact me by <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">ginkgoch@outlook.com</a> or leave me message at my website <a href="https://ginkgoch.com" target="_blank" rel="noopener">ginkgoch.com</a>.</p>
+<p>Looks like a lot work to do, most of the code is business code, and style settings. It’s quite simple to understand. That’s it for today. When I have time later, I will write another article to migrate this code to a map service as well as an interactive map software for browser. Feel free to contact me by <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">ginkgoch@outlook.com</a> or leave me message in my website <a href="https://ginkgoch.com" target="_blank" rel="noopener">ginkgoch.com</a>.</p>
 <p>Happy Mapping!</p>
 
             </div>

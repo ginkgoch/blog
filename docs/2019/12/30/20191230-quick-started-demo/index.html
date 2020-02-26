@@ -3,9 +3,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta name="keywords" content="node.js, open source, library, shapefile, command line tool, release, electron map, map, gis software, map server, build map, docker, golang, lodash, map tutorial, map sdk, tutorial">
+    <meta name="keywords" content="map library, cross platform, multiple platforms, mapping software, spatial analysis, open source">
     <title>
-        Mapping for Fun - Ginkgoch Blog
+        Discuss New Events of Cross Platform Map Library | Ginkgoch
     </title>
     <!-- favicon -->
     
@@ -59,7 +59,7 @@
     <h1 class="title">
         <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
         <a href="/" class="logo">
-            Ginkgoch
+            Discuss New Events of Cross Platform Map Library | Ginkgoch
         </a>
     </h1>
     <h2 class="desc">
@@ -103,7 +103,7 @@
                     <article class="post">
     
             <h2 class="post-title">
-                Quick Started Demos for Ginkgoch Map SDK
+                Quick Started Demos for Ginkgoch Map Library
             </h2>
             <ul class="post-date">
                 <li>
@@ -114,7 +114,7 @@
                 </li>
             </ul>
             <div class="post-content">
-                <p>This page represents several simple demos for <a href="https://github.com/ginkgoch/node-map" target="_blank" rel="noopener">pure map core library</a>. In this page, I don’t refer any other web, desktop or mobile frameworks to build rich UX application; but use few lines of code to show the power of its GIS functions.</p>
+                <p>This page represents several simple demos for core functions of <a href="https://github.com/ginkgoch/node-map" target="_blank" rel="noopener">Ginkgoch Map Library</a>. In this page, I won’t introduce any other web, desktop or mobile frameworks to build rich UX application; but only use few lines of code to show the feature of its mapping capabilities. Simple features are basis of building complex mapping software, isn’t it?</p>
 <a id="more"></a> 
 
 <ul>
@@ -166,8 +166,8 @@
 <p><img src="/post-imgs/20191230/render-simple-map.png" alt="render-simple-map"></p>
 <h4 id="Render-a-colorful-map"><a href="#Render-a-colorful-map" class="headerlink" title="Render a colorful map"></a>Render a colorful map</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-colorful-map.js" target="_blank" rel="noopener">render-colorful-map.js</a> represents how to load a shapefile, then extract its property table and find out the distinct field values. When we got the distinct values, it automatically generate a <code>ValueStyle</code> to set an exclusive <code>FillStyle</code> for each values. </p>
 <p><img src="/post-imgs/20191230/render-colorful-map.png" alt="render-colorful-map"></p>
-<h3 id="Tutorial-Begins"><a href="#Tutorial-Begins" class="headerlink" title="Tutorial Begins"></a>Tutorial Begins</h3><p>From this section, I will introduce the very basic demos through geometry, spatial analyze, style renderer, source and layers. I try to use pretty simple demo for example with brief code to show you how to implement a small part in a GIS app. When you understand the very little functions, you could build up a complex and robust GIS app by putting them together.</p>
-<h3 id="Use-Geometries"><a href="#Use-Geometries" class="headerlink" title="Use Geometries"></a>Use Geometries</h3><h4 id="Create-geometry-and-render-with-different-styles"><a href="#Create-geometry-and-render-with-different-styles" class="headerlink" title="Create geometry and render with different styles"></a>Create geometry and render with different styles</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/create-geom.js" target="_blank" rel="noopener">create-geoms.js</a> represents how to create point, polygon and line geometries; then set a specific style base on various geometry type and render them into an image.</p>
+<h3 id="Tutorial-Begins"><a href="#Tutorial-Begins" class="headerlink" title="Tutorial Begins"></a>Tutorial Begins</h3><p>From this section, I will introduce the very basic demos through geometry, spatial analyze, style renderer, source and layers. I try to use pretty simple demo for example with brief code to show you how to implement a small part in a GIS app. When you understand the very little functions, you could build up a complex and robust cross platform mapping software  by putting them together.</p>
+<h3 id="Use-Geometries"><a href="#Use-Geometries" class="headerlink" title="Use Geometries"></a>Use Geometries</h3><h4 id="Create-geometry-and-data-visualization"><a href="#Create-geometry-and-data-visualization" class="headerlink" title="Create geometry and data visualization"></a>Create geometry and data visualization</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/create-geom.js" target="_blank" rel="noopener">create-geoms.js</a> represents how to create point, polygon and line geometries; then set a specific style base on various geometry type and render them into an image.</p>
 <p><img src="/post-imgs/20191230/create-geoms.png" alt="create-geoms"></p>
 <h4 id="Buffer-geometry-by-distance"><a href="#Buffer-geometry-by-distance" class="headerlink" title="Buffer geometry by distance"></a>Buffer geometry by distance</h4><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/spatial-buffer.js" target="_blank" rel="noopener">spatial-buffer.js</a> represents how to buffer a geometry with a specific distance. See the following images for difference.</p>
 <ul>
@@ -178,8 +178,8 @@
 <p>  <img src="/post-imgs/20191230/spatial-buffer-1.png" alt="spatial-buffer"></p>
 </li>
 </ul>
-<h4 id="Other-spatial-operations"><a href="#Other-spatial-operations" class="headerlink" title="Other spatial operations"></a>Other spatial operations</h4><p>We provides other <a href="https://ginkgoch.com/node-geom/classes/spatialops.html" target="_blank" rel="noopener">built-in spatial operations</a>, the other demos are in WIP…</p>
-<h3 id="Use-Styles"><a href="#Use-Styles" class="headerlink" title="Use Styles"></a>Use Styles</h3><h4 id="Use-simple-styles"><a href="#Use-simple-styles" class="headerlink" title="Use simple styles"></a>Use simple styles</h4><p>Actually, we already represents many basic styles within the previous demos. Such as <code>FillStyle</code>, <code>LineStyle</code> or <code>PointStyle</code>. So I will skip those styles and show you some other interesting styles.</p>
+<h4 id="Other-spatial-analysis"><a href="#Other-spatial-analysis" class="headerlink" title="Other spatial analysis"></a>Other spatial analysis</h4><p>We provides more <a href="https://ginkgoch.com/node-geom/classes/spatialops.html" target="_blank" rel="noopener">built-in spatial analysis</a> functionalities, the other demos are in WIP…</p>
+<h3 id="Use-Styles-for-data-visualization"><a href="#Use-Styles-for-data-visualization" class="headerlink" title="Use Styles for data visualization"></a>Use Styles for data visualization</h3><h4 id="Use-simple-styles"><a href="#Use-simple-styles" class="headerlink" title="Use simple styles"></a>Use simple styles</h4><p>Actually, we already represents many basic styles within the previous demos. Such as <code>FillStyle</code>, <code>LineStyle</code> or <code>PointStyle</code>. So I will skip those styles and show you some other interesting styles.</p>
 <ul>
 <li><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/geometries/create-geom.js" target="_blank" rel="noopener">create-geoms.js</a></li>
 </ul>
@@ -211,23 +211,23 @@
 </tr>
 </tbody></table>
 <blockquote>
-<p>I have a cross platform (can run in macOS, Linux and Win so far) GUI application <a href="https://github.com/ginkgoch/node-shapefile-viewer/releases" target="_blank" rel="noopener">Ginkgoch Shapefile Viewer</a> that allows to load shapefile, and render on top of a shapefile. Then you can visually tell what the shapefile looks like and the table data it includes.</p>
+<p>I have a cross platform (can run in macOS, Linux and Win so far) mapping application for desktop <a href="https://github.com/ginkgoch/node-shapefile-viewer/releases" target="_blank" rel="noopener">Shapefile Viewer</a> that allows to load shapefile, and render on based on a shapefile. Then you can visually tell what the shapefile looks like and the features it includes.</p>
 <p><img src="/post-imgs/20191230/overview.png" alt="Shapefile Viewer"></p>
-<p>If GUI is too heavy to you, here is also a <a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">command line tool</a> you could look into.</p>
+<p>If GUI is too heavy to you, here is also a <a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">command line tool</a> to use.</p>
 </blockquote>
 <h5 id="Render-areas-based-on-values"><a href="#Render-areas-based-on-values" class="headerlink" title="Render areas based on values"></a>Render areas based on values</h5><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/use-value-style.js" target="_blank" rel="noopener">use-value-style.js</a> represents how to set an exclusive fill colors based on field <code>CODE</code>.</p>
 <p><img src="/post-imgs/20191230/use-value-style.png" alt="use-value-style"></p>
 <h5 id="Filter-and-render-areas-based-on-some-specific-values"><a href="#Filter-and-render-areas-based-on-some-specific-values" class="headerlink" title="Filter and render areas based on some specific values"></a>Filter and render areas based on some specific values</h5><p><a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/render-filter-values.js" target="_blank" rel="noopener">render-filter-values.js</a> represents how to filter and render areas with field values <code>MAL</code>,  <code>ZAI</code> and <code>SUD</code> only.</p>
 <p><img src="/post-imgs/20191230/render-filter-values.png" alt="render-filter-values"></p>
-<h4 id="Use-Text-Style"><a href="#Use-Text-Style" class="headerlink" title="Use Text Style"></a>Use Text Style</h4><p>Labels are pretty important for styling. We also support it. Check out <a href="styles/use-text-style">use-text-style.js</a> for how to use <code>TextStyle</code> to put text on the map. This style automatically ignore the overlapping labels. If some label for small area not drawn, try to zoom deeper and you could see it when there is enough space for this label and no overlapping labels around it.</p>
+<h4 id="Use-Text-Style"><a href="#Use-Text-Style" class="headerlink" title="Use Text Style"></a>Use Text Style</h4><p>Labels are pretty important for data visualization. We also support it. Check out <a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/styles/use-text-style" target="_blank" rel="noopener">use-text-style.js</a> for how to use <code>TextStyle</code> to put text on a map. This style automatically ignore the overlapping labels. If some label for small area not drawn, try to zoom in deeper and you could see it when there is enough space for this label and no overlapping labels around it.</p>
 <p><img src="/post-imgs/20191230/use-text-style.png" alt="use-text-style"></p>
 <h3 id="Layers-and-Sources"><a href="#Layers-and-Sources" class="headerlink" title="Layers and Sources"></a>Layers and Sources</h3><p>As the samples represented previously, in the mean time, the <code>FeatureSource</code> and <code>FeatureLayer</code> are also used in the previous demos (e.g. <a href="https://github.com/ginkgoch/map-quick-started-demos/blob/develop/core/quick-started/render-colorful-map.js" target="_blank" rel="noopener">render-colorful-map.js</a>). Here I just emphasize there difference. </p>
 <ul>
 <li><code>FeatureSource</code> is a base class to help to fetch features from a specific map source data. We will create various kinds of map source by extending this base class. For example, we will use <code>ShapefileFeatureSource</code> to fetch features from <code>Shapefile</code> while<code>MemoryFeatureSource</code> is used to store temporary features in memory. There will be lots of kind of data sources in GIS region. I will introduce more later.</li>
 <li><code>FeatureLayer</code> is a major container of <code>FeatureSource</code> and <code>Style</code>. We can assume that <code>Layer</code> is utils to accommodate <code>FeatureSource</code> and <code>Style</code> for rendering your customized map surface.</li>
 </ul>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>In this page, I introduced some basic guide for <code>Ginkgoch</code> map core library. It is the very low level component of building a map application programmatically. I’m now planning to do some advanced guide to build RESTful APIs, or cross platform GUI applications. Hope you enjoy it. </p>
-<p>Thanks for reading, happy mapping !!!</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>In this page, I introduced some basic guide for <code>Ginkgoch map library</code>. It is a very low level SDK of building cross platform mapping software programmatically. I’m now planning to do some advanced guide to build RESTful APIs, and cross platform GUI applications. Hope you enjoy it. </p>
+<p>Thanks for reading. Happy Mapping!!!</p>
 
             </div>
 </article>

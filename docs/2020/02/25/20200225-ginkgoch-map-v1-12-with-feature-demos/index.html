@@ -3,9 +3,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta name="keywords" content="node.js, open source, library, shapefile, command line tool, release, electron map, map, gis software, map server, build map, docker, golang, lodash, map tutorial, map sdk, tutorial">
+    <meta name="keywords" content="map library, cross platform, multiple platforms, mapping software, spatial analysis, open source">
     <title>
-        Mapping for Fun - Ginkgoch Blog
+        Discuss New Events of Cross Platform Map Library | Ginkgoch
     </title>
     <!-- favicon -->
     
@@ -59,7 +59,7 @@
     <h1 class="title">
         <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
         <a href="/" class="logo">
-            Ginkgoch
+            Discuss New Events of Cross Platform Map Library | Ginkgoch
         </a>
     </h1>
     <h2 class="desc">
@@ -103,7 +103,7 @@
                     <article class="post">
     
             <h2 class="post-title">
-                Node MAP SDK v1.12 Released with Feature Demos
+                Map Library v1.12 Released with Feature Demos
             </h2>
             <ul class="post-date">
                 <li>
@@ -114,20 +114,20 @@
                 </li>
             </ul>
             <div class="post-content">
-                <p>Many feedback indicate that the <a href="https://github.com/ginkgoch/map-quick-started-demos" target="_blank" rel="noopener">getting started sample</a> is too simple. Yes, I agree. Here comes 20+ downloadable and executable feature demos are available. Also released with new MAP SDK version v1.12.0 with many API improvements as well as some new functions.</p>
+                <p>Many feedback indicate that the <a href="https://github.com/ginkgoch/map-quick-started-demos" target="_blank" rel="noopener">getting started sample</a> is too simple. Yes, I agree. Here comes 20+ downloadable and executable feature demos. Also released new Map Library v1.12.0 with many API improvements as well as some new spatial analysis functions.</p>
 <a id="more"></a> 
 
 <h2 id="v1-12-0-Change-Logs"><a href="#v1-12-0-Change-Logs" class="headerlink" title="v1.12.0 Change Logs"></a>v1.12.0 Change Logs</h2><ul>
 <li>Add <code>ViewportUtils.getInitViewport</code> function to get a proper lng, lat, zoom from envelope</li>
 <li>Allow to build geometries with number arrays for easier number input. e.g. <code>new LineString([{x:0, y:0}, {x:10, y:10}])</code> becomes <code>LineString.fromNumbers([0, 0, 10, 10])</code></li>
-<li>Implement query function on FeatureSource which allows to query features based on spatial relationship: <code>intersect</code>, <code>disjoint</code>, <code>within</code>, <code>overlap</code> and <code>touch</code></li>
+<li>Implement spatial analysis for querying on FeatureSource which allows to query features based on spatial relationships: <code>intersect</code>, <code>disjoint</code>, <code>within</code>, <code>overlap</code> and <code>touch</code></li>
 <li>Add declare file (*.d.ts) for native register for better typescript support</li>
 <li>Fix a bug of a returning type is bind to another lib’s specific version, which makes typescript upstream project compile filed</li>
 <li>Add a strategy to auto break down values by its index position. Previously, it breaks down by value, when the maximum value is far away from the second large value, the effect is not good.</li>
 <li>Allow to create new delimited file with specified features.</li>
 </ul>
 <p>More history change logs, please refer to <a href="https://github.com/ginkgoch/node-map/blob/develop/RELEASE.md" target="_blank" rel="noopener">this page</a> for detail.</p>
-<h2 id="Feature-Demos"><a href="#Feature-Demos" class="headerlink" title="Feature Demos"></a>Feature Demos</h2><p>Learning feature with demos will be a pretty easy way to get started. Before learning from source code, a better approach is to take a look at what it can be done with an executable application.</p>
+<h2 id="Feature-Demos"><a href="#Feature-Demos" class="headerlink" title="Feature Demos"></a>Feature Demos</h2><p>Learning feature with demos will be a pretty easy way to get started. Before learning from source code, a better approach is to take a look at what it can be done with an executable mapping software.</p>
 <p>This feature demo application is built with <code>electron</code> that support to run on <code>macOS</code>, <code>Windows</code> and <code>Linux</code>.</p>
 <p><img src="/post-imgs/20200225/overview.png" alt="feature-demos"></p>
 <p><img src="/post-imgs/20200225/screenshot-1.png" alt="feature-demos-detail"></p>

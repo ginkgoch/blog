@@ -1,12 +1,12 @@
 ---
-title: Node MAP SDK v1.9 Released
+title: Map Library for Node.js v1.9 Released
 date: 2020-02-13
 tag: [ node.js, open source, library, shapefile, release, map sdk ]
 ---
-One day before valentines day, I released my `ginkgoch map` SDK for Node.js v1.9 with a lot of new features and improvements.
+One day before valentines day, I released my `ginkgoch map library` for Node.js v1.9 with a lot of new features and improvements.
 <!--more-->
 
-> `Ginkgoch MAP` SDK is a software development kit for building cross-platform GIS software and service with JavaScript.
+> `Ginkgoch MAP Library` is a software development kit for building cross platform mapping software and service with JavaScript.
 
 ## Change Logs
 * Support to set antialias
@@ -21,6 +21,7 @@ One day before valentines day, I released my `ginkgoch map` SDK for Node.js v1.9
 * Improve drawing quality
 * Improve drawing performance by avoid unnecessary steps (projection etc.)
 * Improve envelope() returns a concrete type instead of interface
+* Improve spatial analyse performance.
 
 ## Getting Started with
 ```bash

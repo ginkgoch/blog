@@ -3,7 +3,7 @@ title: Godash - Lodash for Go Open Source
 date: 2019-11-01
 tag: [ golang, lodash, open source, library ]
 ---
-[This project](github.com/ginkgoch/godash) is lodash in golang version. A modern Golang utility library delivering modularity, performance & extras.
+[Godash](github.com/ginkgoch/godash) is an open source library of lodash written with golang. A modern Golang utility library delivering modularity, performance & extras.
 <!-- more --> 
 
 ## Install & Import

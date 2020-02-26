@@ -1,15 +1,15 @@
 ---
-title: Node MAP SDK v1.12 Released with Feature Demos
+title: Map Library v1.12 Released with Feature Demos
 date: 2020-02-25
 tag: [ node.js, open source, library, shapefile, release, map sdk, tutorials, electron map ]
 ---
-Many feedback indicate that the [getting started sample](https://github.com/ginkgoch/map-quick-started-demos) is too simple. Yes, I agree. Here comes 20+ downloadable and executable feature demos are available. Also released with new MAP SDK version v1.12.0 with many API improvements as well as some new functions.
+Many feedback indicate that the [getting started sample](https://github.com/ginkgoch/map-quick-started-demos) is too simple. Yes, I agree. Here comes 20+ downloadable and executable feature demos. Also released new Map Library v1.12.0 with many API improvements as well as some new spatial analysis functions.
 <!-- more --> 
 
 ## v1.12.0 Change Logs
 * Add `ViewportUtils.getInitViewport` function to get a proper lng, lat, zoom from envelope
 * Allow to build geometries with number arrays for easier number input. e.g. `new LineString([{x:0, y:0}, {x:10, y:10}])` becomes `LineString.fromNumbers([0, 0, 10, 10])`
-* Implement query function on FeatureSource which allows to query features based on spatial relationship: `intersect`, `disjoint`, `within`, `overlap` and `touch`
+* Implement spatial analysis for querying on FeatureSource which allows to query features based on spatial relationships: `intersect`, `disjoint`, `within`, `overlap` and `touch`
 * Add declare file (*.d.ts) for native register for better typescript support
 * Fix a bug of a returning type is bind to another lib’s specific version, which makes typescript upstream project compile filed
 * Add a strategy to auto break down values by its index position. Previously, it breaks down by value, when the maximum value is far away from the second large value, the effect is not good.
@@ -18,7 +18,7 @@ Many feedback indicate that the [getting started sample](https://github.com/gink
 More history change logs, please refer to [this page](https://github.com/ginkgoch/node-map/blob/develop/RELEASE.md) for detail.
 
 ## Feature Demos
-Learning feature with demos will be a pretty easy way to get started. Before learning from source code, a better approach is to take a look at what it can be done with an executable application.
+Learning feature with demos will be a pretty easy way to get started. Before learning from source code, a better approach is to take a look at what it can be done with an executable mapping software.
 
 This feature demo application is built with `electron` that support to run on `macOS`, `Windows` and `Linux`.
 
@@ -33,8 +33,6 @@ Go to the [release page](https://github.com/ginkgoch/map-desktop-demo/releases) 
 * Feature Demos for Windows (I don't have a Windows machine, if you need one, please goto the [repo and follow my guide](https://github.com/ginkgoch/map-desktop-demo) to build one)
 
 Visit more feature demo source code on https://github.com/ginkgoch/map-desktop-demo
-
-
 
 Happy Mapping 😎
 

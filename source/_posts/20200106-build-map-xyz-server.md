@@ -1,9 +1,9 @@
 ---
-title: Build a XYZ Map Server with MAP SDK
+title: Build a XYZ Map Server with MAP Library
 date: 2020-01-06
 tag: [ node.js, map tutorial, map, build map, map server ]
 ---
-In the previous page: [Quick Started Demos for Map Core](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/README.md), I introduced the basic library of `Ginkgoch Map`. It allows developers to draw a map with shapefiles or features with thematic styles, then store it as an image on disk. It is a pretty simple and pure demo which could only guide to build some console utilities. But `Ginkgoch` is far more powerful than that. 
+In the previous page: [Quick Started Demos for Map Core](https://github.com/ginkgoch/map-quick-started-demos/blob/develop/README.md), I introduced the basic features of `Ginkgoch Map Library`. It allows developers to draw a map with shapefiles or features with thematic styles, then store it as an image on disk. It is a pretty simple and pure demo which could only guide to build some console utilities. But `Ginkgoch Map Library` is far more powerful than that for crafting web mapping software. 
 <!-- more --> 
 
 I used to announce that `Ginkgoch Map` library allows to build cross platform server, desktop and mobile applications with only JavaScript. So today, I will try to challenge to build an interactive map. 
@@ -23,21 +23,21 @@ I used to announce that `Ginkgoch Map` library allows to build cross platform se
 
 ## Scenario
 
-I want to build an Africa map view only on browser, I have my own Shapefiles (Countries.shp, Africa.shp). I want to set my own color for those data. Besides the static map, I want to interact with the map. Click an area and identify the area I clicked and make it highlighted. See the demo at (https://github.com/ginkgoch/map-quick-started-demos/tree/develop/services)
+I want to build an Africa mapping software only on browser, I have my own Shapefiles (Countries.shp, Africa.shp). I want to set my own color for those data. Besides the static map, I want to interact with the map. Click an area and make it highlighted. See the demo at (https://github.com/ginkgoch/map-quick-started-demos/tree/develop/services)
 
-This is how it looks like in the final. Let's do it!
+This is how it looks like finally. Let's do it!
 
 ![identify](/post-imgs/20200106/preview-identify.png)
 
 ## Prerequisite
 
-Again, `Ginkgoch Map` is a low level map library which only focus on building map. At this stage, we need to require some other framework to help us to build service, desktop, mobile application easier. Fortunately, `Ginkgoch Map` is compatible with work with them. e.g. work with KOA to build RESTful or web applications, Electron to build desktop and React Native for mobile. In the near future, I will write more documents to cover them. But in this article, let's focus on map server or web more.
+Again, `Ginkgoch Map Library` is a low level SDK which only focus on building mapping software for spatial analysis and data visualization. At this stage, we need some other frameworks associate to build service, desktop, mobile mapping software easier. Fortunately, `Ginkgoch Map Library` is compatible with them. e.g. working with KOA to build RESTful or web mapping softwares, working with Electron to build desktop and React Native for mobile apps. In the near future, I will write more documents to cover them. But in this article, let's focus on map server or web more.
 
 * Koa - a lightweight web framework for node
 * Koa Router - a router engine for Koa framework
 * Koa Body Parser - a body parser middleware
 * Canvas - the native graphics engine for node
-* __Ginkgoch Map - Ginkgoch map library for server side rendering__
+* __Ginkgoch Map Library - for server side spatial analysis and data visualization__
 * Leaflet - a front-end map library
 
 ```bash
@@ -175,13 +175,13 @@ Then create `assets/index.html` as following:
 </html>
 ```
 
-That's all for our basic map application. I will try to make those steps as a template just help to build the server and client part easier later. With the power of `Leaflet`, you could drag to pan the map and scroll to zoom on the map.
+That's all for our basic web mapping software. I will try to make those steps as a template just help to build the server and client part easier later. With the power of `Leaflet`, you could drag to pan the map and scroll to zoom on the map.
 
 ![preview-basic-map](/post-imgs/20200106/preview-basic-map.png)
 
 ### Identify the countries by clicking
 
-We have one last feature not implemented - `identify`. It is a pretty common operation which allows you to click on the map, find out what countries are intersected within the clicked area, and prompt a popup to show the information.
+We have one last feature not implemented - `identify`. It is a pretty common spatial analysis which allows you to click on the map, find out what countries are intersected within the clicked area, and prompt a popup to show the information.
 
 #### Identify - Client
 
@@ -277,7 +277,7 @@ Now, let's start the server by running `node index.js` in terminal and input the
 
 ## Summary
 
-It is a pretty long doc, but you could understand the designing and concrete workflow to implement a GIS app. It can be much simpler, here we only uses `Ginkgoch map` basic APIs, later, we could start to use some high-level APIs to reduce the code.
+It is a pretty long doc, but follow it step-by-step could help to understand the designing and concrete workflow of building a web mapping software. It can be much simpler, here we only uses `Ginkgoch map library` with basic APIs. later, we could start to use some high-level APIs to reduce the code.
 
 Happy Mapping!
 
