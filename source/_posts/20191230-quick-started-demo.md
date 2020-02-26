@@ -1,7 +1,7 @@
 ---
 title: Quick Started Demos for Ginkgoch Map SDK
 date: 2019-12-30
-tag: [ javascript, gis, map, service, xyz service, tiling, zoom level ]
+tag: [ node.js, map tutorial, map, build map ]
 ---
 This page represents several simple demos for [pure map core library](https://github.com/ginkgoch/node-map). In this page, I don't refer any other web, desktop or mobile frameworks to build rich UX application; but use few lines of code to show the power of its GIS functions.
 <!-- more --> 

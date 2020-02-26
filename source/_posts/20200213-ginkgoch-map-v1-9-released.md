@@ -1,7 +1,7 @@
 ---
 title: Node MAP SDK v1.9 Released
 date: 2020-02-13
-tag: [ map, shapefile, gis tools ]
+tag: [ node.js, open source, library, shapefile, release, map sdk ]
 ---
 One day before valentines day, I released my `ginkgoch map` SDK for Node.js v1.9 with a lot of new features and improvements.
 <!--more-->

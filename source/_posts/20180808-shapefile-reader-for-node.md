@@ -1,7 +1,7 @@
 ---
 title: Shapefile Reader for Node.js is Open Source
 date: 2018-08-08
-tag: [ node, node-io, shapefile ]
+tag: [ node.js, open source, library, shapefile ]
 ---
 `ginkgoch-shapefile-reader` is a Node.js library to help to read shapefiles from your disk.
 <!-- more --> 

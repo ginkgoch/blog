@@ -1,7 +1,7 @@
 ---
 title: Map Builder Platform Open Source
 date: 2019-10-24
-tag: [ ginkgoch, map server, map builder, docker, docker-compose ]
+tag: [ node.js, open source, map server, map, shapefile, gis software, build map, docker ]
 ---
 [This project](https://github.com/ginkgoch/node-map-server) is a map server template that could help you to build robust and customize map service quickly with Ginkgoch map library ([Ginkgoch Map for NodeJS](https://github.com/ginkgoch/node-map/blob/develop/README.md) is a map library written by Node.js with full functional features on GIS application development).
 <!-- more --> 

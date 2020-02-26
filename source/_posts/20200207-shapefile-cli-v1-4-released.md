@@ -1,7 +1,7 @@
 ---
 title: Shapefile CLI v1.4 Released
 date: 2020-02-07
-tag: [ map, shapefile, gis tools ]
+tag: [ node.js, open source, command line tool, shapefile, release ]
 ---
 Today, I made a new release of my old project `node-shapefile-cli` with a set of new features for better experience; upgraded the core implementation for better performance and more precise vectors.
 <!-- more --> 

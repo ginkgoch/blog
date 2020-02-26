@@ -1,7 +1,7 @@
 ---
 title: Cross-Platform Shapefile Viewer Released
 date: 2019-01-01
-tag: [ node, node-io, shapefile ]
+tag: [ node.js, open source, electron map, map, shapefile, release, gis software ]
 ---
 Are you looking for a easy to use `shapefile viewer on macOS`? `Ginkgoch` provides a utility to view shapefile's geometries and properties for free.
 <!-- more --> 

@@ -1,7 +1,7 @@
 ---
 title: Node MAP SDK v1.12 Released with Feature Demos
 date: 2020-02-25
-tag: [ map, shapefile, gis tools ]
+tag: [ node.js, open source, library, shapefile, release, map sdk, tutorials, electron map ]
 ---
 Many feedback indicate that the [getting started sample](https://github.com/ginkgoch/map-quick-started-demos) is too simple. Yes, I agree. Here comes 20+ downloadable and executable feature demos are available. Also released with new MAP SDK version v1.12.0 with many API improvements as well as some new functions.
 <!-- more --> 
