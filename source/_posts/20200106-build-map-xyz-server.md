@@ -27,7 +27,7 @@ I want to build an Africa mapping software only on browser, I have my own Shapef
 
 This is how it looks like finally. Let's do it!
 
-![identify](/post-imgs/20200106/preview-identify.png)
+![identify](/blog/post-imgs/20200106/preview-identify.png)
 
 ## Prerequisite
 
@@ -135,7 +135,7 @@ module.exports = router;
 
 Let's open a browser and type url `localhost:3000/maps/default/0/0/0`, the tile image with the world map will respond.
 
-![tile-default-0-0-0](/post-imgs/20200106/tile-default-0-0-0.png)
+![tile-default-0-0-0](/blog/post-imgs/20200106/tile-default-0-0-0.png)
 
 At this step, we know how to an API for XYZ tile. How could we build an interactive map? Let keep working on the front-end part in the next section.
 
@@ -177,7 +177,7 @@ Then create `assets/index.html` as following:
 
 That's all for our basic web mapping software. I will try to make those steps as a template just help to build the server and client part easier later. With the power of `Leaflet`, you could drag to pan the map and scroll to zoom on the map.
 
-![preview-basic-map](/post-imgs/20200106/preview-basic-map.png)
+![preview-basic-map](/blog/post-imgs/20200106/preview-basic-map.png)
 
 ### Identify the countries by clicking
 
@@ -273,7 +273,7 @@ router.post('/maps/:name/do', async ctx => {
 
 Now, let's start the server by running `node index.js` in terminal and input the URL (http://localhost:3000) in browser; click an area on the map and it will highlight; click again will popup the country name.
 
-![identify](/post-imgs/20200106/preview-identify.png)
+![identify](/blog/post-imgs/20200106/preview-identify.png)
 
 ## Summary
 

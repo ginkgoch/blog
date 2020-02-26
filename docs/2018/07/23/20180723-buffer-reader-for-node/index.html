@@ -11,7 +11,7 @@
     
     <link rel="icon" href="https://ginkgoch.com/favicon-v2.png">
     
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="blog/css/style.css">
 
     <!-- highlight -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
@@ -57,8 +57,8 @@
         <div class="container">
             <header class="header">
     <h1 class="title">
-        <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
-        <a href="/" class="logo">
+        <center><img src="blog/img/logo.png" style="max-width: 120px;" /></center>
+        <a href="blog/" class="logo">
             Ginkgoch
         </a>
     </h1>
@@ -117,7 +117,7 @@
                 <p>In Node.js, when we want to read continuous number or string from a <a href="https://cn.nodejs.org/api/buffer.html" target="_blank" rel="noopener">Buffer</a> instance, we have to maintain a position where we are reading at. To make it easy, here is a library to help to read <a href="https://cn.nodejs.org/api/buffer.html" target="_blank" rel="noopener">Buffer</a> instance easier.</p>
 <a id="more"></a> 
 
-<p><img src="/post-imgs/20180723/buffer-in-node.jpeg" alt="buffer in node.js"></p>
+<p><img src="/blog/post-imgs/20180723/buffer-in-node.jpeg" alt="buffer in node.js"></p>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i ginkgoch-buffer-reader --save</span><br></pre></td></tr></table></figure>
 
 <h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm test</span><br></pre></td></tr></table></figure>
@@ -135,7 +135,7 @@
 <h2 id="API-List"><a href="#API-List" class="headerlink" title="API List"></a>API List</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(buffer: Buffer);</span><br><span class="line">seek(offset: number, fromBeginning = true);</span><br><span class="line">nextBuffer(length: number);</span><br><span class="line">nextString(length: number, encoding = 'utf-8');</span><br><span class="line">nextIn8();</span><br><span class="line">nextUInt8();</span><br><span class="line">nextUInt16LE();</span><br><span class="line">nextUInt16BE();</span><br><span class="line">nextInt16LE();</span><br><span class="line">nextInt16BE();</span><br><span class="line">nextUInt32LE();</span><br><span class="line">nextUInt32BE();</span><br><span class="line">nextInt32LE();</span><br><span class="line">nextInt32BE();</span><br><span class="line">nextFloatLE();</span><br><span class="line">nextFloatBE();</span><br><span class="line">nextDoubleLE();</span><br><span class="line">nextDoubleBE();</span><br></pre></td></tr></table></figure>
 
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://ginkgoch.com" target="_blank" rel="noopener">Ginkgoch Home Page</a></li>
+<li><a href="https://ginkgoch.com">Ginkgoch Home Page</a></li>
 <li><a href="https://github.com/ginkgoch/node-buffer-reader" target="_blank" rel="noopener">View on Github</a></li>
 <li><a href="https://github.com/ginkgoch/node-buffer-reader/issues" target="_blank" rel="noopener">Report an Issue</a> or <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">Contact Author</a></li>
 </ul>
@@ -156,7 +156,7 @@
                         
     <h1>Archives</h1>
 
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="blog/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="blog/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="blog/archives/2018/">2018</a></li></ul>
 
 
                     </section>
@@ -164,7 +164,7 @@
                         
     <h1>Tags</h1>
 
-    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/build-map/">build map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command-line-tool/">command line tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron-map/">electron map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gis-software/">gis software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/library/">library</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-sdk/">map sdk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-tutorial/">map tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/open-source/">open source</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorials/">tutorials</a></li></ul>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/build-map/">build map</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/command-line-tool/">command line tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/electron-map/">electron map</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/gis-software/">gis software</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/library/">library</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/map-sdk/">map sdk</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/map-tutorial/">map tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/open-source/">open source</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/tutorials/">tutorials</a></li></ul>
 
                     </section>
                 </aside>

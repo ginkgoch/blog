@@ -6,15 +6,15 @@ tag: [ node.js, open source, electron map, map, shapefile, release, gis software
 Are you looking for a easy to use `shapefile viewer on macOS`? Here is an open source cross platform desktop mapping software to view shapefile's geometries and relative information which is built above [Ginkgoch Map Library](https://ginkgoch.com). 
 <!-- more --> 
 
-![Shapefile viewer on macOS preview](/post-imgs/20190101/overview.png)
+![Shapefile viewer on macOS preview](/blog/post-imgs/20190101/overview.png)
 
 * For Mac/Windows/Linux executable, download from the [release page](https://github.com/ginkgoch/node-shapefile-viewer/releases).
 
-![Shapefile viewer on macOS preview](/post-imgs/20190101/overview.png)
+![Shapefile viewer on macOS preview](/blog/post-imgs/20190101/overview.png)
 
-![Shapefile viewer on Windows preview](/post-imgs/20190101/overview-win.png)
+![Shapefile viewer on Windows preview](/blog/post-imgs/20190101/overview-win.png)
 
-![Shapefile viewer on Linux preview](/post-imgs/20190101/overview-linux.png)
+![Shapefile viewer on Linux preview](/blog/post-imgs/20190101/overview-linux.png)
 
 ## Features
 1. Load shapefile
@@ -29,7 +29,7 @@ Are you looking for a easy to use `shapefile viewer on macOS`? Here is an open s
 1. macOS compatible
 
 ## Overview
-![Overview-workspace](/post-imgs/20190101/overview-structure.png)
+![Overview-workspace](/blog/post-imgs/20190101/overview-structure.png)
 
 Here introduces the workspaces of the UI. There are generally 5 sections.
 
@@ -43,12 +43,12 @@ Here introduces the workspaces of the UI. There are generally 5 sections.
 ### Open a shapefile
 There are two ways to open a specifid shapefile. There are on the menu on the very top and the open button on the toolbar. Select a shapefile from the popup dialog.
 
-![Open a shapefile](/post-imgs/20190101/open.png)
+![Open a shapefile](/blog/post-imgs/20190101/open.png)
 
 ### Shapefile loaded
 After the shapefile is loaded, a map visualizes on the `Map` and its properties displays on the `Properties` area.
 
-![Point cluster](/post-imgs/20190101/point-cluster.png)
+![Point cluster](/blog/post-imgs/20190101/point-cluster.png)
 
 ### Identify features
 There are two entires to identify a feature and make it highlighted.

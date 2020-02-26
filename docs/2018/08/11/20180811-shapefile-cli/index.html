@@ -11,7 +11,7 @@
     
     <link rel="icon" href="https://ginkgoch.com/favicon-v2.png">
     
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="blog/css/style.css">
 
     <!-- highlight -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
@@ -57,8 +57,8 @@
         <div class="container">
             <header class="header">
     <h1 class="title">
-        <center><img src="/img/logo.png" style="max-width: 120px;" /></center>
-        <a href="/" class="logo">
+        <center><img src="blog/img/logo.png" style="max-width: 120px;" /></center>
+        <a href="blog/" class="logo">
             Ginkgoch
         </a>
     </h1>
@@ -114,12 +114,12 @@
                 </li>
             </ul>
             <div class="post-content">
-                <p>Sometimes, when we want to peek a shapefile, see what’s the shape type it is, how many records it has, or find out what properties it contains. There are some free tools to visualize it. But most of the tools are too heavy or maybe not possible to support multiple platforms such as macOS or Linux. Here is a cross platform command line tool to inspect a specified shapefile on our local machine with Ginkgoch <a href="https://ginkgoch.com" target="_blank" rel="noopener">map library</a>. It provides functions to inspect a specified shapefile’s header, fields, records etc. You could see, it is totally free and open source. Enjoy it!</p>
+                <p>Sometimes, when we want to peek a shapefile, see what’s the shape type it is, how many records it has, or find out what properties it contains. There are some free tools to visualize it. But most of the tools are too heavy or maybe not possible to support multiple platforms such as macOS or Linux. Here is a cross platform command line tool to inspect a specified shapefile on our local machine with Ginkgoch <a href="https://ginkgoch.com">map library</a>. It provides functions to inspect a specified shapefile’s header, fields, records etc. You could see, it is totally free and open source. Enjoy it!</p>
 <a id="more"></a>
 
-<p><img src="/post-imgs/20180811/shapefile-cli.gif" alt="shapefile cli"></p>
+<p><img src="/blog/post-imgs/20180811/shapefile-cli.gif" alt="shapefile cli"></p>
 <blockquote>
-<p>This command line tool is created by <a href="https://ginkgoch.com" target="_blank" rel="noopener">Ginkgoch Map Library</a> which is powerful map library written by Node.js for building cross platform map software for desktop, web service and mobile applications with your own GIS data.</p>
+<p>This command line tool is created by <a href="https://ginkgoch.com">Ginkgoch Map Library</a> which is powerful map library written by Node.js for building cross platform map software for desktop, web service and mobile applications with your own GIS data.</p>
 </blockquote>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># global install</span><br><span class="line">npm i -g ginkgoch-shapefile-cli</span><br><span class="line"></span><br><span class="line"># local install</span><br><span class="line">npm i --save ginkgoch-shapefile-cli</span><br><span class="line"></span><br><span class="line">## Help</span><br><span class="line">```terminal</span><br><span class="line">shapefile-cli --help</span><br></pre></td></tr></table></figure>
 
@@ -171,7 +171,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shapefile-cli convert-geojson ./tests/data/USStates.shp</span><br><span class="line"></span><br><span class="line">Conversion complete. New file is saved at ./tests/data/USStates.json.</span><br></pre></td></tr></table></figure>
 
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://ginkgoch.com" target="_blank" rel="noopener">Ginkgoch Home Page</a></li>
+<li><a href="https://ginkgoch.com">Ginkgoch Home Page</a></li>
 <li><a href="https://github.com/ginkgoch/node-shapefile-cli" target="_blank" rel="noopener">View on Github</a></li>
 <li><a href="https://github.com/ginkgoch/node-shapefile-cli/issues" target="_blank" rel="noopener">Report an Issue</a> or <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">Contact Author</a></li>
 </ul>
@@ -192,7 +192,7 @@
                         
     <h1>Archives</h1>
 
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="blog/archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="blog/archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="blog/archives/2018/">2018</a></li></ul>
 
 
                     </section>
@@ -200,7 +200,7 @@
                         
     <h1>Tags</h1>
 
-    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/build-map/">build map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command-line-tool/">command line tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron-map/">electron map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gis-software/">gis software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/library/">library</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-sdk/">map sdk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map-tutorial/">map tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/open-source/">open source</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorials/">tutorials</a></li></ul>
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/build-map/">build map</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/command-line-tool/">command line tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/electron-map/">electron map</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/gis-software/">gis software</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/library/">library</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/lodash/">lodash</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/map/">map</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/map-sdk/">map sdk</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/map-server/">map server</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/map-tutorial/">map tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/open-source/">open source</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/shapefile/">shapefile</a></li><li class="tag-list-item"><a class="tag-list-link" href="blog/tags/tutorials/">tutorials</a></li></ul>
 
                     </section>
                 </aside>

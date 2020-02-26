@@ -6,7 +6,7 @@ tag: [ node.js, open source, library ]
 I/O APIs are very important. Node.js' file stream API is very raw and you can read file.
 <!-- more --> 
 
-![readable stream in node.js](/post-imgs/20180728/stream-in-node.jpeg)
+![readable stream in node.js](/blog/post-imgs/20180728/stream-in-node.jpeg)
 
 The fact is that, the API is hard to use, for example:
 ```js

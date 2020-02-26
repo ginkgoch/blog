@@ -6,7 +6,7 @@ tag: [ node.js, open source, map server, map, shapefile, gis software, build map
 [This project](https://github.com/ginkgoch/node-map-server) is a map server template that could help you to build robust and customize map service quickly with [Ginkgoch Map Library](https://github.com/ginkgoch/node-map/blob/develop/README.md) which is written by Node.js with full functional features for crafting mapping software.
 <!-- more --> 
 
-![Demo Overview](/post-imgs/20191024/map-overview.png)
+![Demo Overview](/blog/post-imgs/20191024/map-overview.png)
 
 ## Features
 This is a project template with RESTful APIs as:
