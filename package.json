@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "rm -rf docs/* && ./node_modules/.bin/hexo generate && cp -r public/* docs/",
-    "tags": "node scripts/sync-tags.js"
+    "build": "rm -rf docs/* && ./node_modules/.bin/hexo generate && cp -r public/* docs/"
   },
   "hexo": {
     "version": "3.9.0"
