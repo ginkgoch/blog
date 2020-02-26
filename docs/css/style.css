@@ -110,7 +110,7 @@ code {
   }
   .header .social-button::before {
     content: '';
-    background: url("../../img/menu.svg");
+    background: url("../img/menu.svg");
     display: inline-block;
     width: 16px;
     height: 16px;
