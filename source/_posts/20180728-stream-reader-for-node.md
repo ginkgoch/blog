@@ -3,8 +3,10 @@ title: Stream Reader for Node.JS is Open Source
 date: 2018-07-28
 tag: [ node.js, open source, library ]
 ---
-I/O APIs are very important. Node.js' file stream API is very raw and you can read file.
+I/O APIs are very important. Node.js' file stream API is very rough for reading file stream.
 <!-- more --> 
+
+[View project in Github](https://github.com/ginkgoch/node-stream-reader)
 
 ![readable stream in node.js](/blog/post-imgs/20180728/stream-in-node.jpeg)
 
@@ -41,7 +43,4 @@ load(stream);
 
 See, we use `async` function, no callbacks and we can read any length of buffer as we need to.
 
-## Reference
-* [Ginkgoch Home Page](https://ginkgoch.com)
-* [View on Github](https://github.com/ginkgoch/node-stream-reader)
-* [Report an Issue](https://github.com/ginkgoch/node-stream-reader/issues) or [Contact Author](mailto:ginkgoch@outlook.com)
+<!-- md _reference.md -->

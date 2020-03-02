@@ -6,6 +6,8 @@ tag: [ node.js, open source, command line tool, shapefile, release ]
 Sometimes, when we want to peek a shapefile, see what's the shape type it is, how many records it has, or find out what properties it contains. There are some free tools to visualize it. But most of the tools are too heavy or maybe not possible to support multiple platforms such as macOS or Linux. Here is a cross platform command line tool to inspect a specified shapefile on our local machine with Ginkgoch [map library](https://ginkgoch.com). It provides functions to inspect a specified shapefile's header, fields, records etc. You could see, it is totally free and open source. Enjoy it!
 <!-- more -->
 
+[View project in Github](https://github.com/ginkgoch/node-shapefile-cli)
+
 ![shapefile cli](/blog/post-imgs/20180811/shapefile-cli.gif)
 
 > This command line tool is created by [Ginkgoch Map Library](https://ginkgoch.com) which is powerful map library written by Node.js for building cross platform map software for desktop, web service and mobile applications with your own GIS data.
@@ -189,7 +191,4 @@ shapefile-cli convert-geojson ./tests/data/USStates.shp
 Conversion complete. New file is saved at ./tests/data/USStates.json.
 ```
 
-## Reference
-* [Ginkgoch Home Page](https://ginkgoch.com)
-* [View on Github](https://github.com/ginkgoch/node-shapefile-cli)
-* [Report an Issue](https://github.com/ginkgoch/node-shapefile-cli/issues) or [Contact Author](mailto:ginkgoch@outlook.com)
+<!-- md _reference.md -->

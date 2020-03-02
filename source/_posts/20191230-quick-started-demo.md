@@ -140,4 +140,6 @@ As the samples represented previously, in the mean time, the `FeatureSource` and
 
 In this page, I introduced some basic guide for `Ginkgoch map library`. It is a very low level SDK of building cross platform mapping software programmatically. I'm now planning to do some advanced guide to build RESTful APIs, and cross platform GUI applications. Hope you enjoy it. 
 
-Thanks for reading. Happy Mapping!!!
+Thanks for reading. Happy Mapping!
+
+<!-- md _reference.md -->

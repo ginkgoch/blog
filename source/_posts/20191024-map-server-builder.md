@@ -3,8 +3,10 @@ title: Open Source Map Builder Platform
 date: 2019-10-24
 tag: [ node.js, open source, map server, map, shapefile, gis software, build map, docker ]
 ---
-[This project](https://github.com/ginkgoch/node-map-server) is a map server template that could help you to build robust and customize map service quickly with [Ginkgoch Map Library](https://github.com/ginkgoch/node-map/blob/develop/README.md) which is written by Node.js with full functional features for crafting mapping software.
+`Node Map Server` is a map server template that could help you to build robust and customize map service quickly with [Ginkgoch Map Library](https://ginkgoch.com) which is written in Node.js with full functional features for crafting mapping software.
 <!-- more --> 
+
+[View project in Github](https://github.com/ginkgoch/node-map-server)
 
 ![Demo Overview](/blog/post-imgs/20191024/map-overview.png)
 
@@ -95,5 +97,4 @@ One more thing I think the worst thing for node.js is the memory restriction (e.
 #### Mature JavaScript Echo-System
 JavaScript has a great echo-system for full-stack technology. It allows to build cross platform website, service, desktop or even mobile applications. `Ginkgoch` provides a Node.js map library for building cross platform mapping software. (PS. it is now supported website, web services, desktop; and mobile is in my backlog).
 
-## Issues
-Contact [ginkgoch@outlook.com](mailto:ginkgoch@outlook.com) or [submit an issue](https://github.com/ginkgoch/node-map-server/issues). Happy mapping 😎
+<!-- md _reference.md -->

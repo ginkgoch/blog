@@ -100,43 +100,37 @@
     </nav>
 </header>
                 <main class="main">
-                    <article class="post">
+                    
+<section class="posts">
     
-            <h2 class="post-title">
-                Stream Reader for Node.JS is Open Source
-            </h2>
-            <ul class="post-date">
-                <li>
-                    2018-07-28
-                </li>
-                <li>
-                    Ginkgoch
-                </li>
-            </ul>
-            <div class="post-content">
-                <p>I/O APIs are very important. Node.js’ file stream API is very rough for reading file stream.</p>
-<a id="more"></a> 
+        <article class="post">
+            
+                    <h1 class="post-title">
+                        <a href="/blog/2018/07/23/20180723-buffer-reader-for-node/">
+                            Buffer Reader for Node.JS is Open Source
+                        </a>
+                    </h1>
 
-<p><a href="https://github.com/ginkgoch/node-stream-reader" target="_blank" rel="noopener">View project in Github</a></p>
-<p><img src="/blog/post-imgs/20180728/stream-in-node.jpeg" alt="readable stream in node.js"></p>
-<p>The fact is that, the API is hard to use, for example:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> readStream = fs.createReadStream(<span class="string">'myfile.txt'</span>);</span><br><span class="line">readStream.on(<span class="string">'data'</span>, chunk =&gt; <span class="built_in">console</span>.log(chunk));</span><br></pre></td></tr></table></figure>
-
-<p>The pain point is that, the data is read in an closure, you cannot read a chunk buffer with an expected length (even though you can use <code>readable</code>), so it makes it difficult to code. I don’t like to have too many callbacks neither. So I created a stream reader to get rid of the callback hell.</p>
-<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save ginkgoch-stream-reader</span><br></pre></td></tr></table></figure>
-
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">const</span> stream = fs.createReadStream(filename, &#123; <span class="attr">encoding</span>: <span class="string">'utf-8'</span> &#125;);</span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">load</span>(<span class="params">stream</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sr = <span class="keyword">new</span> StreamReader(stream);</span><br><span class="line">    <span class="keyword">await</span> sr.open();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> r = <span class="literal">undefined</span>;</span><br><span class="line">    <span class="keyword">while</span>(r = <span class="keyword">await</span> sr.read(<span class="number">16</span>)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">load(stream);</span><br></pre></td></tr></table></figure>
-
-<p>See, we use <code>async</code> function, no callbacks and we can read any length of buffer as we need to.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://ginkgoch.com">Ginkgoch Home Page</a></li>
-<li><a href="https://ginkgoch.com/node-map-guide">Ginkgoch Development Guide</a></li>
-<li><a href="https://github.com/ginkgoch/node-map" target="_blank" rel="noopener">View on Github</a></li>
-<li><a href="https://github.com/ginkgoch/node-map/issues" target="_blank" rel="noopener">Report an Issue</a> or <a href="mailto:ginkgoch@outlook.com" target="_blank" rel="noopener">Contact Author</a></li>
-</ul>
-
-            </div>
-</article>
+                    <ul class="post-date">
+                        <li>
+                            July 23, 2018
+                        </li>
+                        <li>
+                            Ginkgoch
+                        </li>
+                    </ul>
+                    
+                        <div class="post-cover">
+                            <img src="/blog/post-imgs/20180723/buffer-in-node.jpeg">
+                        </div>
+                    
+                    <div class="post-content ">
+                        <p>In Node.js, when we want to read continuous number or string from a <a href="https://cn.nodejs.org/api/buffer.html" target="_blank" rel="noopener">Buffer</a> instance, we have to maintain a position where we are reading at. To make it easy, here is a library to help to read <a href="https://cn.nodejs.org/api/buffer.html" target="_blank" rel="noopener">Buffer</a> instance easier.</p>
+                            <a href="/blog/2018/07/23/20180723-buffer-reader-for-node/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+</section>
 
                 </main>
                 <aside class="aside">

@@ -6,6 +6,8 @@ tag: [ node.js, open source, electron map, map, shapefile, release, gis software
 Are you looking for a easy to use `shapefile viewer on macOS`? Here is an open source cross platform desktop mapping software to view shapefile's geometries and relative information which is built above [Ginkgoch Map Library](https://ginkgoch.com). 
 <!-- more --> 
 
+[View project in Github](https://github.com/ginkgoch/node-shapefile-viewer)
+
 ![Shapefile viewer on macOS preview](/blog/post-imgs/20190101/overview.png)
 
 * For Mac/Windows/Linux executable, download from the [release page](https://github.com/ginkgoch/node-shapefile-viewer/releases).
@@ -60,5 +62,4 @@ Currently, we support `GeoJson` and `CSV` file formats as target data format. On
 
 You could also find the `Export` button as well on the second position of the quick `Toolbox` space.
 
-## Issues
-Contact [ginkgoch@outlook.com](mailto:ginkgoch@outlook.com) or [sumbit an issue](https://github.com/ginkgoch/node-shapefile-reader/issues).
+<!-- md _reference.md -->

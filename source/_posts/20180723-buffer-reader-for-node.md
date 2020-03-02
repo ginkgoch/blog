@@ -6,6 +6,8 @@ tag: [ node.js, open source, library ]
 In Node.js, when we want to read continuous number or string from a [Buffer](https://cn.nodejs.org/api/buffer.html) instance, we have to maintain a position where we are reading at. To make it easy, here is a library to help to read [Buffer](https://cn.nodejs.org/api/buffer.html) instance easier.
 <!-- more --> 
 
+[View project in Github](https://github.com/ginkgoch/node-buffer-reader)
+
 ![buffer in node.js](/blog/post-imgs/20180723/buffer-in-node.jpeg)
 
 ## Install
@@ -72,7 +74,4 @@ nextDoubleLE();
 nextDoubleBE();
 ```
 
-## Reference
-* [Ginkgoch Home Page](https://ginkgoch.com)
-* [View on Github](https://github.com/ginkgoch/node-buffer-reader)
-* [Report an Issue](https://github.com/ginkgoch/node-buffer-reader/issues) or [Contact Author](mailto:ginkgoch@outlook.com)
+<!-- md _reference.md -->

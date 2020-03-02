@@ -75,6 +75,10 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: autumn
 
+include_markdown:
+  dir: source/_templates   # Base directory of template markdown
+  verbose : true 
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

@@ -33,7 +33,4 @@ Visit [this repo](https://github.com/ginkgoch/map-quick-started-demos) for more 
 Happy Mapping 😎
 
 
-## Reference
-* [Ginkgoch Home Page](https://ginkgoch.com)
-* [View on Github](https://github.com/ginkgoch/node-map)
-* [Report an Issue](https://github.com/ginkgoch/node-map/issues) or [Contact Author](mailto:ginkgoch@outlook.com)
+<!-- md _reference.md -->
