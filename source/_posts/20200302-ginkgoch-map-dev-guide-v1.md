@@ -18,7 +18,7 @@ Add more technology documents are missing. It is distributed in every corner of 
 
 Today, I'm going to refactor all those issues to make my map library development guide better.
 
-This weekend, I've done following items to setup my new [Ginkgoch Map Library Development Guide](https://ginkgoch.com/node-map-guide) - v1.
+This weekend, I've done following items to setup my new [Ginkgoch Map Library Development Guide](https://ginkgoch.com/guide) - v1.
 
 * Built with docsify which makes me focus on existing resources and documentations.
 * Re-write all the getting started mapping demos for multiple platforms: CLI, desktop, service and web app.
@@ -26,7 +26,7 @@ This weekend, I've done following items to setup my new [Ginkgoch Map Library De
 * Collect all my showcases and organize them in one page to share.
 * Collect all the non-tech resources and group into one section.
 
-Let me re-introduce my map library [development guide](https://ginkgoch.com/node-map-guide)!
+Let me re-introduce my map library [development guide](https://ginkgoch.com/guide)!
 
 ![map-library-dev-guide](/blog/post-imgs/20200302/map-library-dev-guide.png)
 
